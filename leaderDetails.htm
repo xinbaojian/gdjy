@@ -37,8 +37,9 @@
                             <ul>
                                 <!-- <li class="active"><a href="3741.html">学会领导</a></li> -->
                                 {ms:channel typeid="2" order="asc"}
-                                <li><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></li>
+                                <li id="sidenav-li-${field.typeid}"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></li>
                                 {/ms:channel}
+
                             </ul>
                         </div> <!-- 左侧导航区域结束 -->
                         <!-- 右区域 -->
@@ -46,6 +47,7 @@
                             <!-- 学会领导详情区域 -->
                             <div class="page_leader_content">
                                 <!-- 领导区域 -->
+                                <#if field.typeid != 4>
                                 <div class="panel_leader">
                                     <!-- 左区域 -->
                                     <div class="panel_leader_left"><img src="${field.litpic}"></div>
@@ -65,6 +67,8 @@
                                     </div>
                                     <!-- 右区域结束-->
                                 </div>
+                                </#if>
+                                <h6 class="page_title">学会简介</h6>
                                 <!-- 领导区域结束 -->
                                 <!-- 领导详情文字区域 -->
                                 <div class="branch_text_box">
@@ -99,3 +103,11 @@
 </html>
 
 <#include "common.htm" />
+<script type="text/javascript">
+    var currentTypeId = ${field.typeid}
+    if (currentTypeId === 11 || currentTypeId === 3){
+        $("#sidenav-li-3").addClass("active");
+    } else if(currentTypeId === 4){
+        $("#sidenav-li-4").addClass("active");
+    }
+</script>

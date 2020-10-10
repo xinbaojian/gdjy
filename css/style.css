@@ -1619,8 +1619,8 @@
     overflow: hidden;
 }
 .research_box_left{
-    float: left;
-    width: 715px;
+    /* float: left; */
+    width: 100%;
 }
 .research_box_left .research_text{
     padding-bottom: 20px;

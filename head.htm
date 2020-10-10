@@ -197,40 +197,67 @@
     <!-- 二级导航区域结束 -->
 </li>
 <li>
-    <a href="364.html">学术动态</a>
+    {ms:channel type="self" typeid=13}
+    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
     <!-- 二级导航区域 -->
     <div class="menu_nav">
         <ul>
-            <li><a href="thinkTank.html" title="智库观点">智库观点</a></li>
-            <li><a href="scientificReference.html" title="科研参考">科研参考</a></li>
-            <li><a href="825.html" title="课题研究">课题研究</a></li>
-            <li><a href="826.html" title="成果发布">成果发布</a></li>
+            {ms:channel typeid=13 orderby="sort" order="desc"}
+            <li><a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a></li>
+            {/ms:channel}
         </ul>
     </div> <!-- 二级导航区域结束 -->
+    {/ms:channel}
 </li>
 <li>
-    <a href="365.html">品牌建设</a>
+    {ms:channel type="self" typeid=18}
+    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
     <!-- 二级导航区域 -->
     <div class="menu_nav">
         <ul>
-            <li><a href="javascript:;" title="高博会">高博会</a></li>
-            <li><a href="annualMeeting.html" title="国际论坛年会">国际论坛年会</a></li>
-            <li><a href="733.html" title="中国高教研究">中国高教研究</a></li>
+            {ms:channel type="son" orderby="sort" order="desc"}
+            <li>
+                <#if field.typeid == 19>
+                    <a title="${field.typetitle}"
+                        {ms:channel type="son" order="desc"}
+                            <#if field.typeindex == 1>
+                            href="{ms:global.url/}${field.typelink}" >
+                            </#if>
+                        {/ms:channel}
+                        ${field.typetitle}</a>
+                <#else>
+                    <a href="<#if field.typeurl != "" >${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>" title="${field.typetitle}">${field.typetitle}</a>
+                </#if>
+            </li>
+            {/ms:channel}
         </ul>
     </div>
     <!-- 二级导航区域结束 -->
+    {/ms:channel}
 </li>
 <li>
-    <a href="462.html">分支机构</a>
+    {ms:channel type="self" typeid=22}
+    
+    <a href='
+        {ms:channel type="self" typeid=25}
+            {ms:global.url/}${field.typelink}
+        {/ms:channel}
+    '>
+        ${field.typetitle}</a>
     <!-- 二级导航区域 -->
     <div class="menu_nav">
         <ul>
-            <li><a href="462.html" title="分会列表">分会列表</a></li>
-            <li><a href="818.html" title="分会纵横">分会纵横</a></li>
-            <li><a href="index1.html" title="联系方式">联系方式</a></li>
+            {ms:channel type="son" orderby="sort" order="desc"}
+            <#if field.typeid == 23>
+                <li><a href="${field.typelitpic}" target="_blank" title="${field.typetitle}">${field.typetitle}</a></li>
+            <#else>
+                <li><a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a></li>
+            </#if>
+            {/ms:channel}
         </ul>
     </div>
     <!-- 二级导航区域结束 -->
+    {/ms:channel}
 </li>
 <li>
     <a href="367.html">服务与合作</a>

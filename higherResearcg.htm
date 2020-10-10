@@ -1,0 +1,84 @@
+<!--中国高教研究-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>${field.typetitle}_{ms:global.name/}</title>
+    <#include "head-file.htm" />
+</head>
+
+<body>
+<!-- 整体区域 -->
+<div class="wrap">
+    <!-- 中间区域 -->
+    <div class="w1200 clear">
+        <#include "head.htm"/>
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- 子页内容区域 -->
+            <div class="page_content">
+                <!-- 面包屑导航区域 -->
+                <div class="breadnav">
+                    您当前的位置：
+                    <a href="{ms:global.host/}">首页</a>
+                    {ms:channel type="path" }
+                    <span>&gt;</span><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                    {/ms:channel}
+                </div>        <!-- 面包屑导航区域结束 -->
+                <!-- 中间区域 -->
+                <div class="page_cont_box clear">
+                    <!-- 左侧导航区域 -->
+                    <div class="sidenav">
+                        <ul>
+                            {ms:channel type="level" order="desc"}
+                            <li id="sidenav-id-${field.typeid}"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></li>
+                            {/ms:channel}
+                        </ul>
+                    </div>            <!-- 左侧导航区域结束 -->
+                    <!-- 右区域 -->
+                    <div class="cont_right">
+                        <!-- 列表区域 -->
+                        <ul class="two_list">
+                            {ms:arclist size=20}
+                            <#if field.flag == "a">
+                                <li><a href="${field.litpic}" target="_blank" ><img src="{ms:global.host/}/{ms:global.style/}/images/zggjyj.jpg"><div class="cover_tit"><font color="#000000">${field.title}</font></div></a></li>
+                            <#else>
+                            <li><a href="{ms:global.url/}${field.link}"><img src="${field.litpic}"><div class="cover_tit"><font color="#000000">${field.title}</font></div></a></li>
+                            </#if>
+                            {/ms:arclist}
+                            <!-- <li><a href="13323.html"><img src="static/picture/5f55d07c38fd8.jpg"><div class="cover_tit"><font color="#000000">欢迎订阅2021年《中国高教研究》</font></div></a></li> -->
+                        </ul>
+                        <!-- 列表区域结束 -->
+                        <!--分页区域-->
+                        <div class="pages">
+                        </div>
+                        <!--分页区域结束-->
+                    </div>
+                    <!-- 右区域结束 -->
+                </div>
+                <!-- 中间区域结束 -->
+            </div>
+            <!-- 子页内容区域结束 -->
+        </div>
+<!-- 内容区域结束 -->
+
+
+</div>
+<!-- 中间区域结束 -->
+
+<!-- 底部区域 -->
+<#include "footer.htm"/>
+<!-- 底部区域结束 -->
+</div>
+<!-- 整体区域结束 -->
+
+<#include "browser.htm"/>
+
+</body>
+</html>
+
+<#include "common.htm"/>
+<script type="text/javascript">
+    var currentTypeId = ${field.typeid};
+    console.log(currentTypeId);
+    $("#sidenav-id-" + currentTypeId).addClass("active");
+</script>

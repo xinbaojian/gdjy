@@ -1,0 +1,84 @@
+<!--最新通知-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>${field.typetitle}_{ms:global.name/}</title>
+    <#include "head-file.htm" />
+</head>
+
+<body>
+    <!-- 整体区域 -->
+    <div class="wrap">
+        <!-- 中间区域 -->
+        <div class="w1200 clear">
+            <#include "head.htm"/>
+            <!-- 内容区域 -->
+            <div class="content">
+                <!-- 子页内容区域 -->
+                <div class="page_content">
+                    <!-- 面包屑导航区域 -->
+                    <div class="breadnav">
+                        您当前的位置：
+                        <a href="{ms:global.host/}">首页</a>
+                        {ms:channel type="path" }
+                        <span>&gt;</span><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                        {/ms:channel}
+                    </div>
+                    <!-- 面包屑导航区域结束 -->
+                    <!-- 中间区域 -->
+                    <div class="page_cont_box clear">
+                        <!-- 左侧导航区域 -->
+                        <div class="sidenav">
+                            <ul>
+                                {ms:channel type="son" order="desc"}
+                                <li><a href="{ms:global.url/}${field.typelink}">${field.typetitle}123</a></li>
+                                {/ms:channel}
+                            </ul>
+                        </div>
+                        <!-- 左侧导航区域结束 -->
+                        <!-- 右区域 -->
+                        <div class="cont_right">
+                            <!-- 列表区域 -->
+                            <ul class="first_list">
+                                <li><a href="13515.html"><span>•</span>
+                                        <font color="#ff0000">最新| 关于举办“2020高等教育国际论坛年会”的通知</font>
+                                    </a><span class="time">2020-09-18</span></li>
+                                <li><a href="javascript:;"><span>•</span>
+                                        <font color="">Preliminary Notice of Annual International Forum on Higher
+                                            Education 2020</font>
+                                    </a><span class="time">2020-05-06</span></li>
+                                <li><a href="javascript:;"><span>•</span>中国高等教育学会关于举办“2020高等教育国际论坛年会”的预通知</a><span
+                                        class="time">2020-04-27</span></li>
+                            </ul>
+                            <!-- 列表区域结束 -->
+                            <!--分页区域-->
+                            <div class="pages">
+                            </div>
+                            <!--分页区域结束-->
+                        </div>
+                        <!-- 右区域结束 -->
+                    </div>
+                    <!-- 中间区域结束 -->
+                </div>
+                <!-- 子页内容区域结束 -->
+            </div>
+            <!-- 内容区域结束 -->
+
+
+        </div>
+        <!-- 中间区域结束 -->
+
+        <!-- 底部区域 -->
+        <#include "footer.htm"/>
+        <!-- 底部区域结束 -->
+    </div>
+    <!-- 整体区域结束 -->
+    <#include "browser.htm"/>
+
+</body>
+
+</html>
+
+<#include "common.htm"/>
