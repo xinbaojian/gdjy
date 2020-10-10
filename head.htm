@@ -80,10 +80,10 @@
                                                     </#if>
                                                     <p><a href="{ms:global.url/}[field.link/]">${field.title}</a></p>
                                                     <#if field.index==16 || field.index=32>
-        </li>
-        </#if>
-        {/ms:arclist}
-        {/ms:channel}
+                                                    </li>
+                                                    </#if>
+                                                    {/ms:arclist}
+                                                    {/ms:channel}
 
     </ul>
 </div>
@@ -260,29 +260,40 @@
     {/ms:channel}
 </li>
 <li>
-    <a href="367.html">服务与合作</a>
+    {ms:channel type="self" typeid=26}
+    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
     <!-- 二级导航区域 -->
     <div class="menu_nav">
         <ul>
-            <li><a href="389.html" title="国际交流">国际交流</a></li>
-            <li><a href="390.html" title="政府职能转移">政府职能转移</a></li>
-            <li><a href="391.html" title="社会服务">社会服务</a></li>
-            <li><a href="810.html" title="国际合作">国际合作</a></li>
-            <li><a href="default.html" title="合作伙伴">合作伙伴</a></li>
+            {ms:channel type="son" orderby="sort" order="desc"}
+            <li>
+                <#if field.typeid == 27>
+                <a href="${field.typelink}" title="${field.typetitle}">${field.typetitle}</a>
+                <#else>
+                    <a href="<#if field.typeurl != "" >${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>" title="${field.typetitle}">${field.typetitle}</a>
+                </#if>
+            </li>
+            {/ms:channel}
         </ul>
     </div>
     <!-- 二级导航区域结束 -->
+    {/ms:channel}
 </li>
 <li>
-    <a href="368.html">党建与群团</a>
+    {ms:channel type="self" typeid=32}
+    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
     <!-- 二级导航区域 -->
     <div class="menu_nav">
         <ul>
-            <li><a href="394.html" title="支部动态">支部动态</a></li>
-            <li><a href="395.html" title="学习园地">学习园地</a></li>
+            {ms:channel type="son" orderby="sort" order="desc"}
+            <li>
+                <a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a>
+            </li>
+            {/ms:channel}
         </ul>
     </div>
     <!-- 二级导航区域结束 -->
+    {/ms:channel}
 </li>
 </ul>
 </div>
