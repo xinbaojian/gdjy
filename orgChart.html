@@ -1,4 +1,4 @@
-<!--学术动态 -智慧观点-->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -23,8 +23,19 @@
     <link type="text/css" rel="stylesheet" href="/static/css/reset.css">
     <link type="text/css" rel="stylesheet" href="/static/css/swiper.min.css">
     <link type="text/css" rel="stylesheet" href="/static/css/share.min.css">
+    <link rel="stylesheet" href="/static/css/jquery.orgchart.css">
     <!--公共样式结束-->
     <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+    <style type="text/css">
+        #chart-container {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            width:100%;
+            overflow: auto;
+            text-align: center;
+        }
+    </style>
     <!--共用js-->
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/swiper.min.js"></script>
@@ -32,8 +43,9 @@
     <script type="text/javascript" src="/static/js/PageAll.js"></script>
     <script type="text/javascript" src="/static/js/index.js"></script>
     <script type="text/javascript" src="/static/js/jquery.share.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.orgchart.js"></script>
     <!--共用js-->
-    <title>学术动态_中国高等教育学会</title>
+    <title>治理架构_中国高等教育学会</title>
 </head>
 
 <body>
@@ -44,18 +56,18 @@
         <!-- 头部区域 -->
         <div class="header clear">
             <!-- logo区域 -->
-            <div class="logo"><a href="index.html"><img src="/static/images/5f28cba4729bc.png"></a></div>
+            <div class="logo"><a href="index.html"><img src="static/picture/5f28cba4729bc.png"></a></div>
             <!-- logo区域结束 -->
             <!-- 右区域 -->
             <div class="head_right">
-                <div class="head_text"><img src="/static/images/text1.png"></div>
+                <div class="head_text"><img src="static/picture/text1.png"></div>
                 <!-- 搜索区域 -->
                 <div class="head_search">
-                    <p><a href="3641.html#">中文</a>&nbsp;/&nbsp;<a href="3641.html#">EN</a></p>
+                    <p><a href="javascript:;">中文</a>&nbsp;/&nbsp;<a href="javascript:;">EN</a></p>
                     <div class="search_box">
                         <form id="top_search_form" method="get" name="top_search_form" action="/site/search.html">
-                            <input type="text" value="" id="keywords" class="keywords" name="keywords" placeholder="请输入搜索内容">
-                            <button type="submit"><img src="/static/images/icon1.png"></button>
+                                                        <input type="text" value="" id="keywords" class="keywords" name="keywords" placeholder="请输入搜索内容">
+                            <button type="submit"><img src="static/picture/icon1.png"></button>
                         </form>
                     </div>
                 </div>
@@ -67,7 +79,7 @@
         <!-- 导航区域 -->
         <div class="nav">
             <ul>
-                <li class="nav_first"><a href="374.html">学会概况</a>
+                                                            <li class="nav_first"><a href="374.html">学会概况</a>
                             <!-- 二级导航区域 -->
                             <div class="survey_menu_nav">
                                 <!-- 内容区域 -->
@@ -213,16 +225,16 @@
                             </div>
                             <!-- 二级导航区域结束 -->
                         </li>
-                                                                                <li><a href="363.html">治理架构</a>
+                                                                                <li><a href="">治理架构</a>
                             <!-- 二级导航区域 -->
                                                         <!-- 二级导航区域结束 -->
                         </li>
-                                                                                <li><a href="">学术动态</a>
+                                                                                <li><a href="364.html">学术动态</a>
                             <!-- 二级导航区域 -->
                                                         <div class="menu_nav">
                                 <ul>
-                                                                            <li><a href="thinkTank.html" title="智库观点">智库观点</a></li>
-                                                                            <li><a href="scientificReference.html" title="科研参考">科研参考</a></li>
+                                                                            <li><a href="382.html" title="智库观点">智库观点</a></li>
+                                                                            <li><a href="383.html" title="科研参考">科研参考</a></li>
                                                                             <li><a href="825.html" title="课题研究">课题研究</a></li>
                                                                             <li><a href="826.html" title="成果发布">成果发布</a></li>
                                                                     </ul>
@@ -234,7 +246,7 @@
                                                         <div class="menu_nav">
                                 <ul>
                                                                             <li><a href="javascript:;" title="高博会">高博会</a></li>
-                                                                            <li><a href="annualMeeting.html" title="国际论坛年会">国际论坛年会</a></li>
+                                                                            <li><a href="387.html" title="国际论坛年会">国际论坛年会</a></li>
                                                                             <li><a href="733.html" title="中国高教研究">中国高教研究</a></li>
                                                                     </ul>
                             </div>
@@ -274,7 +286,7 @@
                             </div>
                                                         <!-- 二级导航区域结束 -->
                         </li>
-            </ul>
+                                                </ul>
         </div>
         <!-- 导航区域结束 --><!-- 内容区域 -->
 <div class="content">
@@ -284,121 +296,17 @@
         <div class="breadnav">
             您当前的位置：
             <a href="index.html">首页</a>
-            <span>&gt;</span><a href="thinkTank.html">学术动态</a>
-            </div>        <!-- 面包屑导航区域结束 -->
+            <span>&gt;</span><a href="javascript:;">治理架构</a>
+        </div>        <!-- 面包屑导航区域结束 -->
         <!-- 中间区域 -->
         <div class="page_cont_box clear">
-            <!-- 智库观点区域 -->
-            <div class="what_section">
-                <!-- 标题区域 -->
-                <div class="wrap_title"><a href="3821.html">智库观点</a></div>
-                <!-- 标题区域结束 -->
-                <!-- 盒子区域 -->
-                <div class="what_box">
-                    <!-- 左区域 -->
-                    <div class="what_box_left"><img src="static/picture/5f28cba4754b5.jpg"></div>
-                    <!-- 左区域结束 -->
-                    <!-- 右区域 -->
-                    <div class="what_box_right">
-                        <!-- 第一块区域 -->
-                        <div class="news_first">
-                            <a href="3641.html#">
-                                <h6>杜玉波：坚持走好红色育人路 扎根中国大地办好世界一流大学</h6>
-                                <p> </p>
-                            </a>
-                        </div>
-                        <!-- 第一块区域结束 -->
-                        <!-- 列表区域 -->
-                        <ul class="first_list two">
-                            <li><a href="13537.html"><span>•</span>邬大光：论我国高等教育学体系的特殊性</a></li>
-                            <li><a href="13523.html"><span>•</span>瞿振元：本科专业认证：扣紧提高质量这个生命线</a></li>
-                            <li><a href="13317.html"><span>•</span>林蕙青：加快形成中国特色高等教育评估制度体系</a></li>
-                            <li><a href="13329.html"><span>•</span>王树国：46万导师 如何做好研究生成长成才的引路人</a></li>
-                        </ul>
-                        <!-- 列表区域结束 -->
-                    </div>
-                    <!-- 右区域结束 -->
-                </div>
-                <!-- 盒子区域结束 -->
-            </div>
-            <!-- 智库观点区域结束 -->
-            <!-- 科研参考区域 -->
-            <div class="research_section">
-                <!-- 标题区域 -->
-                <div class="wrap_title"><a href="javascript:;">科研参考</a></div>
-                <!-- 标题区域结束 -->
-                <!-- 内容区域 -->
-                <div class="research_box">
-                    <!-- 左区域 -->
-                    <div class="research_box_left">
-                        <!-- 文字区域 -->
-                        <div class="research_text">
-                            <h6>
-                                <a href="javascript:;">研究生培养模式改革</a>
-                            </h6>
-                            <p>
-                                <a href="javascript:;">
-                                    编者的话：作为教育的“金字塔尖”，研究生教育是培养高层次人才的最高阶段，是实施创新驱动发展战略和建设创新型国家的重要基石。2020 年 7 月，习近平总书记就研究生教育工作作出重要指示，要求“瞄准科技前沿和关键领域，深入推进学科专业调整，提升导师队伍水平，完善人才培养体系，加快培养国家...                                                                    
-                                </a>
-                            </p>
+            <!-- 治理架构区域 -->
+            <div class="structure_section">
+                <div id="chart-container">
 
-                        </div>
-                        <!-- 文字区域结束 -->
-                        <!-- 列表区域 -->
-                        <ul class="first_list two">
-                            <li><a href="javascript:;"><span>•</span>“双一流”建设评价</a></li>
-                            <li><a href="javascript:;"><span>•</span>高校教师评价</a></li>
-                        </ul>
-                        <!-- 列表区域结束 -->
-                    </div>
-                    <!-- 左区域结束 -->
-                    <!-- 右区域 -->
-                    <div class="research_box_right">
-                        <ul>
-                            <li><a href="javascript:;"><img src="static/picture/5f559b2d96aaa.jpg"></a></li>
-                            <li><a href="javascript:;"><img src="static/picture/5f559b507e555.jpg"></a></li>
-                        </ul>
-                    </div>
-                    <!-- 右区域结束 -->
                 </div>
-                <!-- 内容区域结束 -->
             </div>
-            <!-- 科研参考区域结束 -->
-            <!-- 课题研究区域 -->
-            <div class="project_section">
-                <!-- 标题区域 -->
-                <div class="wrap_title">课题研究</div>
-                <!-- 标题区域结束 -->
-                <!-- 列表区域 -->
-                <ul class="project_list">
-                    <li><a href="javascript:;">委托课题</a></li>
-                    <li><a href="javascript:;">规划课题</a></li>
-                    <li><a href="javascript:;">新时代高校职称评审与监管体制机制研究</a></li>
-                    <li><a href="javascript:;">高校竞赛评估与管理体系研究</a></li>
-                    <li><a href="javascript:;">高校教师教学发展研究</a></li>
-                    <li><a href="javascript:;">新时代高校教师职业行为十项准则解读</a></li>
-                    <li><a href="javascript:;">资料下载</a></li>
-                </ul>
-                <!-- 列表区域结束 -->
-            </div>
-            <!-- 课题研究区域结束 -->
-            <!-- 成果发布区域 -->
-            <div class="results_section">
-                <!-- 标题区域 -->
-                <div class="wrap_title">成果发布</div>
-                <!-- 标题区域结束 -->
-                <!-- 列表区域 -->
-                <ul class="results_list">
-                    <li><a href="javascript:;">学会委托课题研究成果</a></li>
-                    <li><a href="javascript:;">学会专项课题研究成果</a></li>
-                    <li><a href="javascript:;">学会规划课题研究成果</a></li>
-                    <li><a href="javascript:;">教师教学发展指数</a></li>
-                    <li><a href="javascript:;">全国普通高校学科竞赛排行榜</a></li>
-                    <li><a href="javascript:;">历年全国高校科研论文统计分析</a></li>
-                </ul>
-                <!-- 列表区域结束 -->
-            </div>
-            <!-- 成果发布区域结束 -->
+            <!-- 治理架构区域结束 -->
         </div>
         <!-- 中间区域结束 -->
     </div>
@@ -415,7 +323,7 @@
     <div class="w1200 clear">
         <!-- 左区域 -->
         <div class="foot_logo">
-            <img src="/static/images/logo2.png">
+            <img src="static/picture/logo2.png">
         </div>
         <!-- 左区域结束 -->
         <!-- 中间区域 -->
@@ -423,12 +331,12 @@
             <p><a href="13098.html">联系我们</a>|<a href="13099.html">常用资料</a>|<a target="_blank" href="login.html">管理员入口</a></p>
             <p>学会地址：北京市海淀区学院路35号世宁大厦二层</p>
             <p><a href="javascript:;" target="_blank">京ICP备20026207号-1</a>     中国高等教育学会版权所有     <a href="javascript:;" target="_blank">技术支持：中科服</a></p>
-            <p>网站浏览量：85543</p>
+                        <p>网站浏览量：85543</p>
         </div>
         <!-- 中间区域结束 -->
         <!-- 右区域 -->
         <div class="foot_right">
-            <img src="/static/images/5f28cba4773f5.jpg">
+            <img src="static/picture/5f28cba4773f5.jpg">
         </div>
         <!-- 右区域结束 -->
     </div>
@@ -456,38 +364,127 @@
 
 
 <script>
-    $(window).load(function() {
-        $('.NewsText img').each(function() {
-            var maxWidth = $('.NewsText').width(); // 图片最大宽度
-            var width = $(this).width(); // 图片实际宽度
-            // 检查图片是否超宽
-            if(width > maxWidth){
-                $(this).css("width", maxWidth); // 设定实际显示宽度
-            }
+        $(window).load(function() {
+            $('.NewsText img').each(function() {
+                var maxWidth = $('.NewsText').width(); // 图片最大宽度
+                var width = $(this).width(); // 图片实际宽度
+                // 检查图片是否超宽
+                if(width > maxWidth){
+                    $(this).css("width", maxWidth); // 设定实际显示宽度
+                }
+            });
         });
-    });
 </script>
 
 <script>
-    $(document).ready(function(){
-        //按键事件
-        $(".keywords").keydown(function (event) {//当按下按键时
-            e = event ? event : (window.event ? window.event : null);
-            if (e.keyCode == 13) {
-                if($(this).val() == ''){
+        $(document).ready(function(){
+            //按键事件
+            $(".keywords").keydown(function (event) {//当按下按键时
+                e = event ? event : (window.event ? window.event : null);
+                if (e.keyCode == 13) {
+                    if($(this).val() == ''){
+                        alert("请输入要搜索的关键字");
+                        return false;
+                    }
+                                    window.location.href = "/site/search.html?keywords=" + $(this).val();
+                                }
+            });
+            //提交表单事件
+            $("#top_search_form").submit(function(e){
+                if($('#keywords').val() == ''){
                     alert("请输入要搜索的关键字");
                     return false;
                 }
-                window.location.href = "/site/search.html?keywords=" + $(this).val();
-            }
+            });
         });
-        //提交表单事件
-        $("#top_search_form").submit(function(e){
-            if($('#keywords').val() == ''){
-                alert("请输入要搜索的关键字");
-                return false;
-            }
-        });
-    });
 
+</script>
+
+<script type="text/javascript">
+    $(function() {
+
+    var datascource = {
+      'name': '中国高等教育学会治理架构',
+      'className':'top-level',
+      'children': [
+        { 
+            'name': '分支机构', 
+            'className': 'middle-level'
+        },
+        { 
+            'name': '学术咨询机构', 
+            'className': 'middle-level',
+            'children':[
+                {
+                    "name":"学术委员会",
+                    'className': 'frontend1',
+                    "url":"http://www.baidu.com"
+                },
+                {
+                    "name":"会刊编委会",
+                    'className': 'frontend1',
+                }
+            ]
+        },
+        {
+            'name':"决策机构",
+            'className': 'middle-level',
+            "children":[
+                {
+                    "name":"会员代表大会",
+                    'className': 'frontend1',
+                    children:[
+                        {
+                            name:"理事会",
+                            'className': 'frontend1',
+                            children:[
+                                {
+                                    "name":"常务理事会",
+                                    'className': 'frontend1',
+                                    "children":[
+                                        {
+                                            name:"会长办公室",
+                                            'className': 'frontend1',
+                                        }
+                                    ]
+                                },
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            'name':"执行机构",
+            'className': 'middle-level'
+        },
+        {
+            'name':"监督机构",
+            'className': 'middle-level'
+        },
+        {
+            'name':"会员单位",
+            'className': 'middle-level'
+        }
+    ]
+    };
+
+    var oc = $('#chart-container').orgchart({
+        'data' : datascource,
+        'nodeContent': 'title',
+        'toggleSiblingsResp':false,
+        'createNode': function($node, data) {
+            if(data.url){
+            // var secondMenu = '<a class="second-menu" href="'+data.url+'">'+data.name+'</a>';
+                var div = '<div class="title" title="'+data.name+'"><a class="second-menu" href="'+data.url+'">'+data.name+'</a></div>'
+                $node.children(".title").remove();
+                $node.append(div)
+            }else{
+                var div = '<div class="title" title="'+data.name+'">'+data.name+'</div>'
+                $node.children(".title").remove();
+                $node.append(div)
+            }
+        }
+    });
+});
 </script>
