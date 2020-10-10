@@ -1,0 +1,24 @@
+<!-- banner区域 -->
+<div class="banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {ms:arclist titlelen=45 typeid=1}
+            <div class="swiper-slide">
+                <!-- 图片区域 -->
+                    <div class="img_box">
+                        <a target="_blank" href="{ms:global.url/}${field.link}"><img src="${field.litpic}">
+                            <div class="cover_title">${field.title}</div>
+                        </a>
+                    </div>
+                <!-- 图片区域结束 -->
+            </div>
+            {/ms:arclist}
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<!-- banner区域结束 -->

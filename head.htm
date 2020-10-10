@@ -1,0 +1,262 @@
+<!-- 头部区域 -->
+<div class="header clear">
+    <!-- logo区域 -->
+    <div class="logo"><a href="{ms:global.host/}"><img src="{ms:global.logo/}"></a></div>
+    <!-- logo区域结束 -->
+    <!-- 右区域 -->
+    <div class="head_right">
+        <div class="head_text"><img src="{ms:global.host/}/{ms:global.style/}/images/text1.png"></div>
+        <!-- 搜索区域 -->
+        <div class="head_search">
+            <p><a href="#">中文</a>&nbsp;/&nbsp;<a href="#">EN</a></p>
+            <div class="search_box">
+                <form id="top_search_form" method="get" name="top_search_form" action="/site/search.html">
+                    <input type="text" value="" id="keywords" class="keywords" name="keywords" placeholder="请输入搜索内容">
+                    <button type="submit"><img src="{ms:global.host/}/{ms:global.style/}/images/icon1.png"></button>
+                </form>
+            </div>
+        </div>
+        <!-- 搜索区域结束 -->
+    </div>
+    <!-- 右区域结束 -->
+</div>
+<!-- 头部区域结束 -->
+<!-- 导航区域 -->
+<div class="nav">
+    <ul>
+        <li class="nav_first">
+            {ms:channel type="self" typeid=2}<a
+                href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>{/ms:channel}
+
+            <!-- 二级导航区域 -->
+            <div class="survey_menu_nav">
+                <!-- 内容区域 -->
+                <div class="nav_survey_section">
+                    <!-- 左区域 -->
+                    <div class="nav_survey_left">
+                        <!-- 学会领导区域 -->
+                        <div class="nav_leader">
+                            {ms:channel type="self" typeid=3}
+                            <!-- 标题区域 -->
+                            <div class="wrap_title"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                            </div>
+                            <!-- 标题区域结束 -->
+                            <!-- 领导内容区域 -->
+                            <div class="nav_leader_section">
+                                <!-- 左区域 -->
+                                <div class="nav_leader_left">
+                                    {ms:channel type="self" typeid=11}
+                                    {ms:arclist}
+                                    <a href="{ms:global.url/}${field.link}">
+                                        <img src="${field.litpic}">
+                                        <h6>会长 ${field.title}</h6>
+                                    </a>
+                                    {/ms:arclist}
+                                    {/ms:channel}
+                                </div>
+                                <!-- 左区域结束 -->
+                                <!-- 右区域 -->
+                                <div class="nav_leader_slide">
+                                    <!-- 选项卡标题区域 -->
+                                    <div class="hd">
+                                        <ul>
+                                            <li>副会长</li>
+                                            <li>秘书长</li>
+                                            <li>监事长</li>
+                                            <li>会长</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 选项卡标题区域结束 -->
+                                    <!-- 选项卡内容区域 -->
+                                    <div class="bd">
+                                        <!-- 副会长区域 -->
+                                        <div class="nav_leader_list">
+                                            <div class="nav_leader_slide">
+                                                <ul>
+                                                    {ms:channel type="self" typeid=8}
+                                                    {ms:arclist}
+                                                    <#if field.index==1 || field.index==17>
+                                                        <li>
+                                                    </#if>
+                                                    <p><a href="{ms:global.url/}[field.link/]">${field.title}</a></p>
+                                                    <#if field.index==16 || field.index=32>
+        </li>
+        </#if>
+        {/ms:arclist}
+        {/ms:channel}
+
+    </ul>
+</div>
+</div>
+<div class="nav_leader_list">
+    <div class="nav_leader_slide">
+        <ul>
+            {ms:channel type="self" typeid=9}
+            {ms:arclist}
+            <#if field.index==1 || field.index==17>
+                <li>
+            </#if>
+            <p><a href="{ms:global.url/}[field.link/]">${field.title}</a></p>
+            <#if field.index==16 || field.index=32>
+                </li>
+            </#if>
+            {/ms:arclist}
+            {/ms:channel}
+        </ul>
+    </div>
+</div>
+<div class="nav_leader_list">
+    <div class="nav_leader_slide">
+        <ul>
+            {ms:channel type="self" typeid=10}
+            {ms:arclist}
+            <#if field.index==1 || field.index==17>
+                <li>
+            </#if>
+            <p><a href="{ms:global.url/}[field.link/]">${field.title}</a></p>
+            <#if field.index==16 || field.index=32>
+                </li>
+            </#if>
+            {/ms:arclist}
+            {/ms:channel}
+        </ul>
+    </div>
+</div>
+<!-- 副会长区域结束 -->
+</div>
+<!-- 选项卡内容区域结束 -->
+</div>
+<!-- 右区域结束 -->
+</div>
+<!-- 领导内容区域结束 -->
+{/ms:channel}
+</div>
+<!-- 学会领导区域结束 -->
+<!-- 发展战略区域 -->
+<div class="nav_strategy">
+    {ms:channel type="self" typeid=5}
+    <!-- 标题区域 -->
+    <div class="wrap_title"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></div>
+    <!-- 标题区域结束 -->
+    <!-- 图片区域 -->
+    <div class="nav_strategy_img"><a href="{ms:global.url/}${field.typelink}"><img src="${field.typelitpic}"></a></div>
+    <!-- 图片区域结束 -->
+    {/ms:channel}
+</div>
+<!-- 发展战略区域结束 -->
+</div>
+<!-- 左区域结束 -->
+<!-- 右区域 -->
+<div class="nav_survey_right">
+    <!-- 学会简介区域 -->
+    <div class="nav_introduction">
+        {ms:channel type="self" typeid=4}
+        <!-- 标题区域 -->
+        <div class="wrap_title"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></div>
+        <!-- 标题区域结束 -->
+        <!-- 学会简介内容区域 -->
+        <div class="nav_introduction_section">
+            {ms:arclist}
+            <p>${field.descrip}</p>
+            {/ms:arclist}
+        </div>
+        <!-- 学会简介内容区域结束 -->
+        {/ms:channel}
+    </div>
+    <!-- 学会简介区域结束 -->
+    <!-- 学会规章区域 -->
+    <div class="nav_regulation">
+        {ms:channel type="self" typeid=6}
+        <!-- 标题区域 -->
+        <div class="wrap_title"><a href="{ms:global.url/}${field.typelink}">学会规章</a></div>
+        <!-- 标题区域结束 -->
+        <!-- 学会规章内容区域 -->
+        <div class="nav_regulation_section">
+            <!-- 列表区域 -->
+            <ul class="nav_regulation_list">
+                {ms:arclist}
+                <li><a href="{ms:global.url/}${field.link}"><span>•</span>${field.title}</a></li>
+                {/ms:arclist}
+            </ul>
+            <!-- 列表区域结束 -->
+        </div>
+        <!-- 学会规章内容区域结束 -->
+        {/ms:channel}
+    </div>
+    <!-- 学会规章区域结束 -->
+</div>
+<!-- 右区域结束 -->
+</div>
+<!-- 内容区域结束 -->
+</div>
+<!-- 二级导航区域结束 -->
+</li>
+<li>
+    {ms:channel type="self" typeid=12}<a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>{/ms:channel}
+    <!-- 二级导航区域 -->
+    <!-- 二级导航区域结束 -->
+</li>
+<li>
+    <a href="364.html">学术动态</a>
+    <!-- 二级导航区域 -->
+    <div class="menu_nav">
+        <ul>
+            <li><a href="thinkTank.html" title="智库观点">智库观点</a></li>
+            <li><a href="scientificReference.html" title="科研参考">科研参考</a></li>
+            <li><a href="825.html" title="课题研究">课题研究</a></li>
+            <li><a href="826.html" title="成果发布">成果发布</a></li>
+        </ul>
+    </div> <!-- 二级导航区域结束 -->
+</li>
+<li>
+    <a href="365.html">品牌建设</a>
+    <!-- 二级导航区域 -->
+    <div class="menu_nav">
+        <ul>
+            <li><a href="javascript:;" title="高博会">高博会</a></li>
+            <li><a href="annualMeeting.html" title="国际论坛年会">国际论坛年会</a></li>
+            <li><a href="733.html" title="中国高教研究">中国高教研究</a></li>
+        </ul>
+    </div>
+    <!-- 二级导航区域结束 -->
+</li>
+<li>
+    <a href="462.html">分支机构</a>
+    <!-- 二级导航区域 -->
+    <div class="menu_nav">
+        <ul>
+            <li><a href="462.html" title="分会列表">分会列表</a></li>
+            <li><a href="818.html" title="分会纵横">分会纵横</a></li>
+            <li><a href="index1.html" title="联系方式">联系方式</a></li>
+        </ul>
+    </div>
+    <!-- 二级导航区域结束 -->
+</li>
+<li>
+    <a href="367.html">服务与合作</a>
+    <!-- 二级导航区域 -->
+    <div class="menu_nav">
+        <ul>
+            <li><a href="389.html" title="国际交流">国际交流</a></li>
+            <li><a href="390.html" title="政府职能转移">政府职能转移</a></li>
+            <li><a href="391.html" title="社会服务">社会服务</a></li>
+            <li><a href="810.html" title="国际合作">国际合作</a></li>
+            <li><a href="default.html" title="合作伙伴">合作伙伴</a></li>
+        </ul>
+    </div>
+    <!-- 二级导航区域结束 -->
+</li>
+<li>
+    <a href="368.html">党建与群团</a>
+    <!-- 二级导航区域 -->
+    <div class="menu_nav">
+        <ul>
+            <li><a href="394.html" title="支部动态">支部动态</a></li>
+            <li><a href="395.html" title="学习园地">学习园地</a></li>
+        </ul>
+    </div>
+    <!-- 二级导航区域结束 -->
+</li>
+</ul>
+</div>
+<!-- 导航区域结束 -->

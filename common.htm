@@ -1,0 +1,35 @@
+<script>
+    $(window).load(function () {
+        $('.NewsText img').each(function () {
+            var maxWidth = $('.NewsText').width(); // 图片最大宽度
+            var width = $(this).width(); // 图片实际宽度
+            // 检查图片是否超宽
+            if (width > maxWidth) {
+                $(this).css("width", maxWidth); // 设定实际显示宽度
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        //按键事件
+        $(".keywords").keydown(function (event) {//当按下按键时
+            e = event ? event : (window.event ? window.event : null);
+            if (e.keyCode == 13) {
+                if($(this).val() == ''){
+                    alert("请输入要搜索的关键字");
+                    return false;
+                }
+                window.location.href = "/site/search.html?keywords=" + $(this).val();
+            }
+        });
+        //提交表单事件
+        $("#top_search_form").submit(function(e){
+            if($('#keywords').val() == ''){
+                alert("请输入要搜索的关键字");
+                return false;
+            }
+        });
+    });
+
+</script>

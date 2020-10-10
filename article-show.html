@@ -1,0 +1,87 @@
+<!--新闻页-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>${field.title}</title>
+    <#include "head-file.htm" />
+</head>
+
+<body>
+    <!-- 整体区域 -->
+    <div class="wrap">
+        <!-- 中间区域 -->
+        <div class="w1200 clear">
+            <#include "head.htm"/>
+            <!-- 导航区域结束 -->
+            <style>
+                table[align="center"] {
+                    margin: 0 auto;
+                }
+            </style>
+            <!-- 内容区域 -->
+            <div class="content">
+                <!-- 子页内容区域 -->
+                <div class="page_content">
+                    <!-- 面包屑导航区域 -->
+                    <div class="breadnav">
+                        您当前的位置：
+                        <a href="{ms:global.host/}">首页</a>
+                        {ms:channel type="path" }
+                        <span>&gt;</span><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                        {/ms:channel}
+                    </div> <!-- 面包屑导航区域结束 -->
+                    <!-- 中间区域 -->
+                    <div class="page_cont_box clear">
+                        <!-- 学会资讯区域 -->
+                        <div class="information_section">
+                            <!-- 标题区域 -->
+                            <div class="wrap_title">${field.typetitle}</div>
+                            <!-- 标题区域结束 -->
+                            <!-- 新闻详情区域 -->
+                            <div class="news_content clear">
+                                <!-- 新闻标题区域 -->
+                                <div class="TextTitle clear">
+                                    <h5>${field.title}</h5>
+                                    <div class="shar clear">
+                                        来源：${field.source}&nbsp;&nbsp;&nbsp;&nbsp;阅读数：${field.hit}&nbsp;&nbsp;&nbsp;&nbsp;发布时间：${field.date?string("yyyy-MM-dd")}&nbsp;&nbsp;&nbsp;&nbsp;分享到：
+                                        <!-- 分享按钮区域 -->
+                                        <div class="social-share"></div>
+                                        <!-- 分享按钮区域结束 -->
+                                    </div>
+                                </div>
+                                <!-- 新闻标题区域结束 -->
+                                <!-- 新闻内容详情区域 -->
+                                <div class="branch_text_box">
+                                    ${field.content}
+                                </div>
+                                <!-- 新闻内容详情区域结束 -->
+                                <!--分页区域-->
+                                <div class="pages">
+                                </div>
+                                <!--分页区域结束-->
+                            </div>
+                            <!-- 新闻详情区域结束 -->
+                        </div>
+                        <!-- 学会资讯区域结束 -->
+                    </div>
+                    <!-- 中间区域结束 -->
+                </div>
+                <!-- 子页内容区域结束 -->
+            </div>
+            <!-- 内容区域结束 -->
+
+        </div>
+        <!-- 中间区域结束 -->
+
+        <!-- 底部区域 -->
+        <#include "footer.htm"/>
+        <!-- 底部区域结束 -->
+    </div>
+    <!-- 整体区域结束 -->
+    <#include "browser.htm"/>
+</body>
+
+</html>
+<#include "common.htm"/>

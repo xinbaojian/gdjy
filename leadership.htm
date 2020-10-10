@@ -1,0 +1,212 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>${field.typetitle}_{ms:global.name/}</title>
+    <#include "head-file.htm" />
+</head>
+
+<body>
+    <!-- 整体区域 -->
+    <div class="wrap">
+        <!-- 中间区域 -->
+        <div class="w1200 clear">
+            <#include "head.htm" />
+            <!-- 内容区域 -->
+            <div class="content">
+                <!-- 子页内容区域 -->
+                <div class="page_content">
+                    <!-- 面包屑导航区域 -->
+                    <div class="breadnav">
+                        您当前的位置：<a href="{ms:global.host/}">首页</a>
+                        {ms:channel type="path" }
+                        <span>&gt;</span><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                        {/ms:channel}
+                    </div> <!-- 面包屑导航区域结束 -->
+                    <!-- 中间区域 -->
+                    <div class="page_cont_box clear">
+                        <!-- 左侧导航区域 -->
+                        <div class="sidenav">
+                            <ul>
+                                <li class="active"><a href="3741.html">学会领导</a></li>
+                                <li><a href="learntoAbout.html">学会简介</a></li>
+                                <li><a href="strategic.html">发展战略</a></li>
+                                <li><a href="regulations.html">学会规章</a></li>
+                                <li><a href="javascript:;">大事记</a></li>
+                            </ul>
+                        </div>
+                        <!-- 左侧导航区域结束 -->
+                        <!-- 右区域 -->
+                        <div class="cont_right">
+                            <!-- 学会领导区域 -->
+                            <div class="page_leader_section">
+                                <!-- 标题区域 -->
+                                <h6 class="page_title">学会领导</h6>
+                                <!-- 标题区域结束 -->
+                                <!-- 第一块区域 -->
+                                <div class="page_leader_first">
+                                    <!-- 标题区域 -->
+                                    <div class="page_leader_title">会长</div>
+                                    <!-- 标题区域结束 -->
+                                    <!-- 内容区域 -->
+                                    <div class="page_leader_body">
+                                        <!-- 第一块区域 -->
+                                        <div class="page_leader_box">
+                                            {ms:channel type="self" typeid=11}
+                                            {ms:arclist}
+                                            <a href="{ms:global.url/}${field.link}">
+                                                <img src="${field.litpic}">
+                                                <p>${field.title}</p>
+                                            </a>
+                                            {/ms:arclist}
+                                            {/ms:channel}
+                                        </div>
+                                        <!-- 第一块区域结束 -->
+                                    </div>
+                                    <!-- 内容区域结束 -->
+                                </div>
+                                <!-- 第一块区域结束 -->
+                                <!-- 第一块区域 -->
+                                <div class="page_leader_first">
+                                    <!-- 标题区域 -->
+                                    <div class="page_leader_title">副会长</div>
+                                    <!-- 标题区域结束 -->
+                                    <!-- 内容区域 -->
+                                    <div class="page_leader_body">
+                                        <!-- 副会长轮播区域 -->
+                                        <div class="page_leader_slide">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <!-- 第一块区域 -->
+                                                    {ms:channel type="self" typeid=8}
+                                                    {ms:arclist}
+                                                    <div class="swiper-slide">
+                                                        <a href="{ms:global.url/}${field.link}"><img
+                                                                src="${field.litpic}">
+                                                            <p>${field.title}</p>
+                                                        </a>
+                                                    </div>
+                                                    {/ms:arclist}
+                                                    {/ms:channel}
+                                                    <!-- 第一块区域结束 -->
+                                                </div>
+                                            </div>
+                                            <!-- Add Arrows -->
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                        <!-- 副会长轮播区域结束 -->
+                                    </div>
+                                    <!-- 内容区域结束 -->
+                                </div>
+                                <!-- 第一块区域结束 -->
+                                <!-- 第一块区域 -->
+                                <div class="page_leader_first">
+
+                                    <!-- 内容区域 -->
+                                    <div class="page_leader_body">
+
+                                        <!-- 第一块区域 -->
+                                        <div class="page_leader_box">
+                                            <!-- 标题区域 -->
+                                            <div class="page_leader_title">监事长</div>
+                                            <!-- 标题区域结束 -->
+                                            {ms:channel type="self" typeid=10}
+                                            {ms:arclist}
+                                            <a href="{ms:global.url/}${field.link}">
+                                                <img src="${field.litpic}">
+                                                <p>${field.title}</p>
+                                            </a>
+                                            {/ms:arclist}
+                                            {/ms:channel}
+                                        </div>
+                                        <!-- 第一块区域结束 -->
+                                    </div>
+                                    <!-- 内容区域结束 -->
+                                </div>
+                                <!-- 第一块区域结束 -->
+                                <!-- 第一块区域 -->
+                                <div class="page_leader_first">
+                                    <!-- 内容区域 -->
+                                    <div class="page_leader_body">
+                                        <!-- 第一块区域 -->
+                                        <div class="page_leader_box">
+                                            <!-- 标题区域 -->
+                                            <div class="page_leader_title">秘书长</div>
+                                            <!-- 标题区域结束 -->
+                                            {ms:channel type="self" typeid=9}
+                                            {ms:arclist}
+                                            <a href="{ms:global.url/}${field.link}">
+                                                <img src="${field.litpic}">
+                                                <p>${field.title}</p>
+                                            </a>
+                                            {/ms:arclist}
+                                            {/ms:channel}
+                                        </div>
+                                        <!-- 第一块区域结束 -->
+                                    </div>
+                                </div>
+                                <!-- 第一块区域结束 -->
+                                <!-- 第一块区域 -->
+                                <div class="page_leader_first">
+                                    <!-- 内容区域 -->
+                                    <div class="page_leader_body">
+                                        <!-- 标题区域 -->
+                                        <div class="page_leader_title">副秘书长</div>
+                                        <!-- 标题区域结束 -->
+                                        {ms:channel type="self" typeid=38}
+                                        {ms:arclist}
+                                        <div class="page_leader_box">
+                                            <a href="{ms:global.url/}${field.link}">
+                                                <img src="${field.litpic}">
+                                                <p>${field.title}</p>
+                                            </a>
+                                        </div>
+                                        {/ms:arclist}
+                                        {/ms:channel}
+                                    </div>
+                                    <!-- 内容区域结束 -->
+                                </div>
+                                <!-- 第一块区域结束 -->
+                                <!-- 第二块区域 -->
+                                <div class="page_leader_two">
+                                    <!-- 标题区域 -->
+                                    <div class="page_leader_title">理事会名单</div>
+                                    <!-- 标题区域结束 -->
+                                    <!-- 列表区域 -->
+                                    <ul class="first_list three">
+                                        {ms:arclist size=1000 order="desc" typeid=39}
+                                        <li><a href="{ms:global.url/}${field.link}"><span>•</span>${field.title}</a></li>
+                                        {/ms:arclist}
+                                    </ul>
+                                    <!-- 列表区域结束 -->
+                                </div>
+                                <!-- 第二块区域结束 -->
+                            </div>
+                            <!-- 学会领导区域结束 -->
+                        </div>
+                        <!-- 右区域结束 -->
+                    </div>
+                    <!-- 中间区域结束 -->
+                </div>
+                <!-- 子页内容区域结束 -->
+            </div>
+            <!-- 内容区域结束 -->
+
+        </div>
+        <!-- 中间区域结束 -->
+
+        <!-- 底部区域 -->
+        <#include "footer.htm" />
+        <!-- 底部区域结束 -->
+    </div>
+    <!-- 整体区域结束 -->
+
+    <#include "browser.htm" />
+
+</body>
+
+</html>
+
+<#include "common.htm" />

@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{ms:global.name/}</title>
+    <#include "head-file.htm"/>
+</head>
+
+<body>
+<!-- 整体区域 -->
+<div class="wrap">
+    <!-- 中间区域 -->
+    <div class="w1200 clear">
+        <#include "head.htm"/>
+        <#include "banner.htm"/>
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- 第一块区域 -->
+            <div class="news_section">
+                <!-- 左区域 -->
+                <div class="news_tab Left">
+                    <!-- 盒子区域 -->
+                    <div class="news_tab_box">
+                        <!-- 选项卡标题区域 -->
+                        <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon2.png">
+                            <ul>
+                                <li>
+                                    {ms:channel type="self" typeid=35}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                    </li>|
+                                <li>
+                                    {ms:channel type="self" typeid=24}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 选项卡标题区域结束 -->
+                        <!-- 选项卡内容区域 -->
+                        <div class="bd">
+                            <!-- 学会资讯-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=5 orderby="sort" order="desc" typeid=35}
+                                    <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 学会资讯-结束 -->
+                            <!-- 分会纵横区域 -->
+                            <ul class="index_list">
+                                {ms:arclist size=5 orderby="sort" order="desc" typeid=24}
+                                <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 分会纵横区域结束 -->
+                        </div>
+                        <!-- 选项卡内容区域结束 -->
+                    </div>
+                    <!-- 盒子区域结束 -->
+                </div>
+                <!-- 左区域结束 -->
+                <!-- 左区域 -->
+                <div class="news_tab Left ml30">
+                    <!-- 盒子区域 -->
+                    <div class="news_tab_box">
+                        <!-- 选项卡标题区域 -->
+                        <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon3.png">
+                            <ul>
+                                <li>
+                                    {ms:channel type="self" typeid=17}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>|
+                                <li>
+                                    {ms:channel type="self" typeid=35}
+                                    <a href="{ms:global.url/}${field.typelink}">会刊精选</a>
+                                    {/ms:channel}
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 选项卡标题区域结束 -->
+                        <!-- 选项卡内容区域 -->
+                        <div class="bd">
+                            <!-- 智库观点-开始 -->
+                                <ul class="index_list">
+                                    {ms:arclist size=5 orderby="sort" order="desc" typeid=17}
+                                    <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
+                                    {/ms:arclist}
+                                </ul>
+                            <!-- 智库观点-结束 -->
+                            <!-- 会刊精选-开始 -->
+                                <ul class="index_list">
+                                    {ms:arclist size=5 orderby="sort" order="desc" typeid=19}
+                                    <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
+                                    {/ms:arclist}
+                                </ul>
+                            <!-- 会刊精选-结束 -->
+                        </div>
+                        <!-- 选项卡内容区域结束 -->
+                    </div>
+                    <!-- 盒子区域结束 -->
+                </div>
+                <!-- 左区域结束 -->
+                <!-- 右区域 -->
+                <div class="news_tab Right">
+                    <!-- 盒子区域 -->
+                    <div class="news_tab_box">
+                        <!-- 选项卡标题区域 -->
+                        <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon4.png">
+                            <ul>
+                                <li>
+                                    {ms:channel type="self" typeid=36}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>|<li>
+                                {ms:channel type="self" typeid=37}
+                                <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                {/ms:channel}
+                            </li>
+                            </ul>
+                        </div>
+                        <!-- 选项卡标题区域结束 -->
+                        <!-- 选项卡内容区域 -->
+                        <div class="bd">
+                            <!-- 会议通知-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=5 orderby="sort" order="desc" typeid=36}
+                                <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 会议通知-结束 -->
+                            <!-- 业务公告-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=5 orderby="sort" order="desc" typeid=37}
+                                <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 业务公告-结束 -->
+                        </div>
+                        <!-- 选项卡内容区域结束 -->
+                    </div>
+                    <!-- 盒子区域结束 -->
+                </div>
+                <!-- 右区域结束 -->
+            </div>
+            <!-- 第一块区域结束 -->
+            <!-- 第二块区域 -->
+            <div class="quick_section">
+                <ul>
+                        <li>
+                            <a target="_blank" href="javascript:;"><img src="{ms:global.host/}/{ms:global.style/}/images/5f2a83b80644e.png">
+                                <p>中国高等教育博览会</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="3871.html"><img src="{ms:global.host/}/{ms:global.style/}/images/5f2a83cfd0c01.png">
+                                <p>高等教育国际论坛年会</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="add.html"><img src="{ms:global.host/}/{ms:global.style/}/images/5f2a83e3df6f5.png">
+                                <p>《中国高教研究》投稿平台</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="828.html"><img src="{ms:global.host/}/{ms:global.style/}/images/5f2a840d209aa.png">
+                                <p>课题管理</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="files/index"><img src="{ms:global.host/}/{ms:global.style/}/images/5f2a84258c9c8.png">
+                                <p>会员中心</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="javascript:;"><img src="{ms:global.host/}/{ms:global.style/}/images/5f2a844ae738a.png">
+                                <p>会议/培训报名</p>
+                            </a>
+                        </li>
+                </ul>
+            </div>
+                <!-- 第二块区域结束 -->
+
+            <!-- 第三块区域 -->
+            <div class="link_section">
+                <!-- 选项卡标题区域 -->
+                <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon11.png">
+                    <ul>
+                        <li>主管单位</li>
+                        <li>直属单位</li>
+                        <li>会员高校</li>
+                        <li>友情链接</li>
+                    </ul>
+                </div>
+                <!-- 选项卡标题区域结束 -->
+                <!-- 友情链接内容区域 -->
+                <div class="link_section_box">
+                    <div class="bd">
+                        <!-- 主管单位区域 -->
+                        <div class="link_list">
+                            <div class="link_list_slide">
+                                <ul>
+                                    <!-- 第一页区域 -->
+                                    <li>
+                                        <a target="_blank" href="javascript:;" title="教育部">教育部</a>
+                                        <a target="_blank" href="javascript:;" title="民政部">民政部</a>
+                                    </li>
+                                    <!-- 第一页区域结束 -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="link_list">
+                            <div class="link_list_slide">
+                                <ul>
+                                    <!-- 第一页区域 -->
+                                    <li>
+                                                <a target="_blank" href="javascript:;" title="《中国现代教育装备》杂志社">《中国现代教育装备》杂志社</a>
+                                                <a target="_blank" href="javascript:;" title="中国高等教育培训中心">中国高等教育培训中心</a>
+                                                <a href="javascript:;" title="北京杏坛教学仪器设备展览有限公司">北京杏坛教学仪器设备展览有限公司</a>
+                                        </li>
+                                    <!-- 第一页区域结束 -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="link_list">
+                            <div class="link_list_slide">
+                                <ul>
+                                    <!-- 第一页区域 -->
+                                    <li>
+                                        <a target="_blank" href="13103.html" title="北京市（35所）">北京市（35所）</a>
+                                        <a target="_blank" href="13106.html" title="天津市（12所）">天津市（12所）</a>
+                                        <a target="_blank" href="13107.html" title="河北省（10所）">河北省（10所）</a>
+                                        <a target="_blank" href="13108.html" title="山西省（9所）">山西省（9所）</a>
+                                        <a target="_blank" href="13109.html" title="内蒙古（6所）">内蒙古（6所）</a>
+                                        <a target="_blank" href="13110.html" title="辽宁省（23所）">辽宁省（23所）</a>
+                                        <a target="_blank" href="13111.html" title="吉林省（16所）">吉林省（16所）</a>
+                                        <a target="_blank" href="13112.html" title="黑龙江省（9所）">黑龙江省（9所）</a>
+                                        <a target="_blank" href="13113.html" title="上海市（20所）">上海市（20所）</a>
+                                        <a target="_blank" href="13114.html" title="江苏省（31所）">江苏省（31所）</a>
+                                        <a target="_blank" href="13115.html" title="浙江省（22所）">浙江省（22所）</a>
+                                        <a target="_blank" href="13116.html" title="安徽省（12所）">安徽省（12所）</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="13117.html" title="福建省（8所）">福建省（8所）</a>
+                                        <a target="_blank" href="13118.html" title="江西省（12所）">江西省（12所）</a>
+                                        <a target="_blank" href="13119.html" title="山东省（19所）">山东省（19所）</a>
+                                        <a target="_blank" href="13120.html" title="河南省（14所）">河南省（14所）</a>
+                                        <a target="_blank" href="13121.html" title="湖北省（18所）">湖北省（18所）</a>
+                                        <a target="_blank" href="13122.html" title="湖南省（10所）">湖南省（10所）</a>
+                                        <a target="_blank" href="13123.html" title="广东省（16所）">广东省（16所）</a>
+                                        <a target="_blank" href="13124.html" title="广西（11所）">广西（11所）</a>
+                                        <a target="_blank" href="13125.html" title="海南省（6所）">海南省（6所）</a>
+                                        <a target="_blank" href="13126.html" title="重庆市（10所）">重庆市（10所）</a>
+                                        <a target="_blank" href="13127.html" title="四川省（19所）">四川省（19所）</a>
+                                        <a target="_blank" href="13128.html" title="贵州省（3所）">贵州省（3所）</a>
+                                    </li>
+                                                                <li>
+                                                                            <a target="_blank" href="13129.html" title="云南省（7所）">云南省（7所）</a>
+                                                                            <a target="_blank" href="13130.html" title="西藏（4所）">西藏（4所）</a>
+                                                                            <a target="_blank" href="13131.html" title="陕西省（23所）">陕西省（23所）</a>
+                                                                            <a target="_blank" href="13132.html" title="甘肃省（8所）">甘肃省（8所）</a>
+                                                                            <a target="_blank" href="13133.html" title="青海省（4所）">青海省（4所）</a>
+                                                                            <a target="_blank" href="13134.html" title="宁夏（4所）">宁夏（4所）</a>
+                                                                            <a target="_blank" href="13135.html" title="新疆（6所）">新疆（6所）</a>
+                                                                    </li>
+                                                                <!-- 第一页区域结束 -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="link_list">
+                            <div class="link_list_slide">
+                                <ul>
+                                    <!-- 第一页区域 -->
+                                    <li>
+                                        <a target="_blank" href="javascript:;" title="中国教育学会">中国教育学会</a>
+                                        <a target="_blank" href="javascript:;" title="中国职业技术教育学会">中国职业技术教育学会</a>
+                                        <a target="_blank" href="javascript:;" title="中国教育国际交流协会">中国教育国际交流协会</a>
+                                        <a target="_blank" href="javascript:;" title="中国教育发展战略学会">中国教育发展战略学会</a>
+                                        <a target="_blank" href="javascript:;" title="中国民办教育协会">中国民办教育协会</a>
+                                        <a target="_blank" href="javascript:;" title="中国成人教育协会">中国成人教育协会</a>
+                                        <a target="_blank" href="javascript:;" title="国家教育行政学院">国家教育行政学院</a>
+                                        <a target="_blank" href="javascript:;" title="国家留学基金管理委员会秘书处">国家留学基金管理委员会秘书处</a>
+                                        <a target="_blank" href="javascript:;" title="中国教育报刊社">中国教育报刊社</a>
+                                        <a target="_blank" href="javascript:;" title="教育部学生体育协会联合秘书处">教育部学生体育协会联合秘书处</a>
+                                        <a target="_blank" href="javascript:;" title="教育部高等教育教学评估中心">教育部高等教育教学评估中心</a>
+                                        <a target="_blank" href="javascript:;" title="教育部科技发展中心">教育部科技发展中心</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;" title="教育部中外人文交流中心">教育部中外人文交流中心</a>
+                                        <a target="_blank" href="javascript:;" title="教育部留学服务中心">教育部留学服务中心</a>
+                                        <a target="_blank" href="javascript:;" title="中国教育发展基金会秘书处">中国教育发展基金会秘书处</a>
+                                        <a target="_blank" href="javascript:;" title="教育部考试中心">教育部考试中心</a>
+                                        <a target="_blank" href="javascript:;" title="教育部学位与研究生教育发展中心">教育部学位与研究生教育发展中心</a>
+                                        <a target="_blank" href="javascript:;" title="教育部教育发展研究中心">教育部教育发展研究中心</a>
+                                        <a target="_blank" href="javascript:;" title="教育部高等学校社会科学发展研究中心">教育部高等学校社会科学发展研究中心</a>
+                                        <a target="_blank" href="javascript:;" title="教育部职业技术教育中心研究所">教育部职业技术教育中心研究所</a>
+                                        <a target="_blank" href="javascript:;" title="中国教师发展基金会秘书处">中国教师发展基金会秘书处</a>
+                                        <a target="_blank" href="javascript:;" title="中国教育出版传媒集团">中国教育出版传媒集团</a>
+                                    </li>
+                                                                <!-- 第一页区域结束 -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 主管单位区域结束 -->
+                    </div>
+                </div>
+                <!-- 友情链接内容区域结束 -->
+            </div>
+            <!-- 第三块区域结束 -->
+        </div>
+        <!-- 内容区域结束 -->
+
+
+</div>
+<!-- 中间区域结束 -->
+
+<!-- 底部区域 -->
+    <#include "footer.htm"/>
+<!-- 底部区域结束 -->
+</div>
+<!-- 整体区域结束 -->
+<#include "browser.htm"/>
+</body>
+</html>
+<#include "common.htm"/>
