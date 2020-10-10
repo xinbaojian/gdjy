@@ -1,0 +1,132 @@
+<!--品牌建设-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>${field.typetitle}_{ms:global.name/}</title>
+    <#include "head-file.htm" />
+</head>
+
+<body>
+    <!-- 整体区域 -->
+    <div class="wrap">
+        <!-- 中间区域 -->
+        <div class="w1200 clear">
+            <#include "head.htm"/>
+            <!-- 内容区域 -->
+            <div class="content">
+                <!-- 子页内容区域 -->
+                <div class="page_content">
+                    <!-- 面包屑导航区域 -->
+                    <div class="breadnav">
+                        您当前的位置：
+                        <a href="{ms:global.host/}">首页</a>
+                        {ms:channel type="path" }
+                        <span>&gt;</span><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                        {/ms:channel}
+                    </div> <!-- 面包屑导航区域结束 -->
+                    <!-- 中间区域 -->
+                    <div class="page_cont_box clear">
+                        <!-- 第一块区域 -->
+                        <div class="section_three">
+                            <!-- 左区域 -->
+                            <div class="panel Left">
+                                {ms:channel type="self" typeid=21}
+                                <!-- 标题区域 -->
+                                <div class="wrap_title"><a href="${field.typeurl}">${field.typetitle}</a></div>
+                                <!-- 标题区域结束 -->
+                                <!-- 内容区域 -->
+                                <div class="panel_body">
+                                    <a href="${field.typeurl}"><img src="${field.typelitpic}">
+                                        <p>${field.typetitle}</p>
+                                    </a>
+                                </div>
+                                <!-- 内容区域结束 -->
+                                {/ms:channel}
+                            </div>
+                            <!-- 左区域结束 -->
+                            <!-- 右区域 -->
+                            <div class="panel Right">
+                                {ms:channel type="self" typeid=20}
+                                <!-- 标题区域 -->
+                                <div class="wrap_title"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></div>
+                                <!-- 标题区域结束 -->
+                                <!-- 内容区域 -->
+                                <div class="panel_body">
+                                    <a href="{ms:global.url/}${field.typelink}"><img src="${field.typelitpic}">
+                                        <p>${field.typetitle}</p>
+                                    </a>
+                                </div>
+                                <!-- 内容区域结束 -->
+                                {/ms:channel}
+                            </div>
+                            <!-- 右区域结束 -->
+                        </div>
+                        <!-- 第一块区域结束 -->
+                        <!-- 第二块区域 -->
+                        <div class="proceedings_section">
+                            <!-- 标题区域 -->
+                            <div class="wrap_title"><a href="7331.html">中国高教研究</a></div>
+                            <!-- 标题区域结束 -->
+                            <!-- 内容区域 -->
+                            <div class="proceedings_box">
+                                <!-- 轮播区域 -->
+                                <div class="proceedings_slide">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <!-- 第一块区域 -->
+                                            {ms:arclist size=2000 typeid=19}
+                                            <div class="swiper-slide">
+                                                <div class="img_box">
+                                                    <#if field.flag == "a">
+                                                        <a href="${field.litpic}" target="_blank" >
+                                                            <img src="{ms:global.host/}/{ms:global.style/}/images/zggjyj.jpg">
+                                                            <div class="cover_title">
+                                                                <font color="#000000">${field.title}</font>
+                                                            </div>
+                                                        </a>
+                                                    <#else>
+                                                        <a href="{ms:global.url/}${field.link}">
+                                                            <img src="${field.litpic}">
+                                                            <div class="cover_title">
+                                                                <font color="#000000">${field.title}</font>
+                                                            </div>
+                                                        </a>
+                                                    </#if>
+                                                </div>
+                                            </div>
+                                            {/ms:arclist}
+                                            <!-- 第一块区域结束 -->
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                                <!-- 轮播区域结束 -->
+                            </div>
+                            <!-- 内容区域结束 -->
+                        </div>
+                        <!-- 第二块区域结束 -->
+                    </div>
+                    <!-- 中间区域结束 -->
+                </div>
+                <!-- 子页内容区域结束 -->
+            </div>
+            <!-- 内容区域结束 -->
+
+        </div>
+        <!-- 中间区域结束 -->
+
+        <!-- 底部区域 -->
+        <#include "footer.htm"/>
+        <!-- 底部区域结束 -->
+    </div>
+    <!-- 整体区域结束 -->
+    <#include "browser.htm"/>
+
+</body>
+
+</html>
+
+<#include "common.htm"/>
