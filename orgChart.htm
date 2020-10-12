@@ -1,0 +1,150 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>${field.typetitle}_{ms:global.name/}</title>
+    <#include "head-file.htm" />
+    
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/jquery.orgchart.css">
+    <script type="text/javascript" src="{ms:global.host/}/{ms:global.style/}/js/jquery.orgchart.js"></script>
+</head>
+
+<body>
+    <!-- 整体区域 -->
+    <div class="wrap">
+        <!-- 中间区域 -->
+        <div class="w1200 clear">
+            <#include "head.htm"/>
+            <!-- 内容区域 -->
+            <div class="content">
+                <!-- 子页内容区域 -->
+                <div class="page_content">
+                    <!-- 面包屑导航区域 -->
+                    <div class="breadnav">
+                        您当前的位置：
+                        <a href="{ms:global.host/}">首页</a>
+                        {ms:channel type="path" }
+                        <span>&gt;</span><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                        {/ms:channel}
+                    </div> <!-- 面包屑导航区域结束 -->
+                    <!-- 中间区域 -->
+                    <div class="page_cont_box clear">
+                        <!-- 治理架构区域 -->
+                        <div class="structure_section">
+                            <div id="chart-container">
+
+                            </div>
+                        </div>
+                        <!-- 治理架构区域结束 -->
+                    </div>
+                    <!-- 中间区域结束 -->
+                </div>
+                <!-- 子页内容区域结束 -->
+            </div>
+            <!-- 内容区域结束 -->
+
+        </div>
+        <!-- 中间区域结束 -->
+
+        <!-- 底部区域 -->
+        <#include "footer.htm"/>
+        <!-- 底部区域结束 -->
+    </div>
+    <!-- 整体区域结束 -->
+    <#include "browser.htm"/>
+
+</body>
+
+</html>
+
+<#include "common.htm"/>
+
+<script type="text/javascript">
+    $(function() {
+
+    var datascource = {
+      'name': '中国高等教育学会治理架构',
+      'className':'top-level',
+      'children': [
+        { 
+            'name': '分支机构', 
+            'className': 'middle-level'
+        },
+        { 
+            'name': '学术咨询机构', 
+            'className': 'middle-level',
+            'children':[
+                {
+                    "name":"学术委员会",
+                    'className': 'frontend1',
+                    "url":"http://www.baidu.com"
+                },
+                {
+                    "name":"会刊编委会",
+                    'className': 'frontend1',
+                }
+            ]
+        },
+        {
+            'name':"决策机构",
+            'className': 'middle-level',
+            "children":[
+                {
+                    "name":"会员代表大会",
+                    'className': 'frontend1',
+                    children:[
+                        {
+                            name:"理事会",
+                            'className': 'frontend1',
+                            children:[
+                                {
+                                    "name":"常务理事会",
+                                    'className': 'frontend1',
+                                    "children":[
+                                        {
+                                            name:"会长办公室",
+                                            'className': 'frontend1',
+                                        }
+                                    ]
+                                },
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            'name':"执行机构",
+            'className': 'middle-level'
+        },
+        {
+            'name':"监督机构",
+            'className': 'middle-level'
+        },
+        {
+            'name':"会员单位",
+            'className': 'middle-level'
+        }
+    ]
+    };
+
+    var oc = $('#chart-container').orgchart({
+        'data' : datascource,
+        'nodeContent': 'title',
+        'toggleSiblingsResp':false,
+        'createNode': function($node, data) {
+            if(data.url){
+            // var secondMenu = '<a class="second-menu" href="'+data.url+'">'+data.name+'</a>';
+                var div = '<div class="title" title="'+data.name+'"><a class="second-menu" target="_blank" href="'+data.url+'">'+data.name+'</a></div>'
+                $node.children(".title").remove();
+                $node.append(div)
+            }else{
+                var div = '<div class="title" title="'+data.name+'">'+data.name+'</div>'
+                $node.children(".title").remove();
+                $node.append(div)
+            }
+        }
+    });
+});
+</script>
