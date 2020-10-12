@@ -1,0 +1,133 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>搜索_{ms:global.name/}</title>
+    <#include "head-file.htm" />
+</head>
+
+<body>
+    <!-- 整体区域 -->
+    <div class="wrap">
+        <!-- 中间区域 -->
+        <div class="w1200 clear">
+            <#include "head.htm"/>
+            <!-- 内容区域 -->
+            <div class="content">
+                <!-- 子页内容区域 -->
+                <div class="page_content">
+                    <!-- 面包屑导航区域 -->
+                    <div class="breadnav">
+                        您当前的位置：
+                        <a href="index.html">首页</a>
+                        <span>&gt;</span><a>搜索</a>
+                    </div> <!-- 面包屑导航区域结束 -->
+                    <!-- 中间区域 -->
+                    <div class="page_cont_box clear">
+                        <!-- 学会资讯区域 -->
+                        <div class="information_section">
+                            <!-- 标题区域 -->
+                            <div class="wrap_title">搜索关键字“{ms:search.content_title/}”</div>
+                            <!-- 标题区域结束 -->
+                            <!-- 列表区域 -->
+                            <ul class="four_list">
+                                {ms:arclist size=10 ispaging=true}
+                                <li>
+                                    <a href="{ms:global.url/}/[field.link/]">
+                                        <!-- 时间区域 -->
+                                        <div class="time_section">
+                                            <span class="date">${field.date?string("dd")}</span>
+                                            <span class="year">${field.date?string("yyyy/MM")}</span>
+                                        </div>
+                                        <!-- 时间区域结束 -->
+                                        <!-- 右区域 -->
+                                        <div class="item_cont">
+                                            <h6>
+                                                <font color="#333333">${field.title}</font>
+                                            </h6>
+                                            <p></p>
+                                        </div>
+                                        <!-- 右区域结束 -->
+                                    </a>
+                                </li>
+                                {/ms:arclist}
+
+                            </ul>
+                            <!-- 列表区域结束 -->
+                            <!--分页区域-->
+                            <div class="pages">
+                                <a class="ms-content-main-page-first" href="{ms:page.index/}">首页</a>
+                                <a class="ms-content-main-page-upper" href="{ms:page.pre/}">上一页</a>
+                                <a class="ms-content-main-page-next" href="{ms:page.next/}">下一页</a>
+                                <a class="ms-content-main-page-last" href="{ms:page.last/}">末页</a>
+                            </div>
+                            <!--分页区域结束-->
+                        </div>
+                        <!-- 学会资讯区域结束 -->
+                    </div>
+                    <!-- 中间区域结束 -->
+                </div>
+                <!-- 子页内容区域结束 -->
+            </div>
+            <!-- 内容区域结束 -->
+
+        </div>
+        <!-- 中间区域结束 -->
+
+        <!-- 底部区域 -->
+        <#include "footer.htm"/>
+        <!-- 底部区域结束 -->
+    </div>
+    <!-- 整体区域结束 -->
+    <#include "browser.htm"/>
+
+</body>
+
+</html>
+
+<#include "common.htm"/>
+
+<script>
+    $(document).ready(function () {
+        //按键事件
+        $(".keywords").keydown(function (event) {//当按下按键时
+            e = event ? event : (window.event ? window.event : null);
+            if (e.keyCode == 13) {
+                if ($(this).val() == '') {
+                    alert("请输入要搜索的关键字");
+                    return false;
+                }
+                window.location.href = "/site/search.html?keywords=" + $(this).val();
+            }
+        });
+        //提交表单事件
+        $("#top_search_form").submit(function (e) {
+            if ($('#keywords').val() == '') {
+                alert("请输入要搜索的关键字");
+                return false;
+            }
+        });
+    });
+
+</script>
+<script>
+    var key = "{ms:search.content_title/}";
+    $('.four_list li').each(function (){
+        var oDiv = $(this).find('.item_cont font')[0],
+            sText = oDiv.innerHTML,
+            bgColor = bgColor || "#c40400",
+            sKey = "<span name='addSpan' style='color: "+bgColor+";'>"+key+"</span>",
+            num = -1,
+            rStr = new RegExp(key, "g"),
+            rHtml = new RegExp("\<.*?\>","ig"), //匹配html元素
+            aHtml = sText.match(rHtml); //存放html元素的数组
+        sText = sText.replace(rHtml, '{~}');  //替换html标签
+        sText = sText.replace(rStr,sKey); //替换key
+        sText = sText.replace(/{~}/g,function(){  //恢复html标签
+            num++;
+            return aHtml[num];
+        });
+        oDiv.innerHTML = sText;
+    })
+</script>

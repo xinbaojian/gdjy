@@ -10,8 +10,8 @@
         <div class="head_search">
             <p><a href="#">中文</a>&nbsp;/&nbsp;<a href="#">EN</a></p>
             <div class="search_box">
-                <form id="top_search_form" method="get" name="top_search_form" action="/site/search.html">
-                    <input type="text" value="" id="keywords" class="keywords" name="keywords" placeholder="请输入搜索内容">
+                <form id="searchDataForm" action="{ms:global.host/}/mcms/search.do" method="post">
+                    <input type="text" value="" id="keywords" class="keywords" name="content_title" placeholder="请输入搜索内容">
                     <button type="submit"><img src="{ms:global.host/}/{ms:global.style/}/images/icon1.png"></button>
                 </form>
             </div>
