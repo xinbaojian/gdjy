@@ -694,7 +694,7 @@
     border-bottom: 0;
 }
 .sidenav li:hover,.sidenav li.active{
-    background: url(../image/libg2.jpg) left center no-repeat;
+    background: url(../images/libg2.jpg) left center no-repeat;
     
 }
 .sidenav li:hover a,.sidenav li.active a{
@@ -1203,7 +1203,7 @@
     overflow: hidden;
     border: 1px solid #dcdcdc;
     border-radius: 3px;
-    background: url(../image/libg2.jpg) left center no-repeat;
+    background: url(../images/libg2.jpg) left center no-repeat;
 }
 .cooperation_section .list_two li h6{
     margin-bottom: 5px;
@@ -1687,7 +1687,7 @@
     text-align: center;
     border: 1px solid #dcdcdc;
     border-radius: 3px;
-    background: url(../image/libg2.jpg) left center no-repeat;
+    background: url(../images/libg2.jpg) left center no-repeat;
     transition: background-color 0.3s ease-out, color 0.3s ease-out, opacity 0.3s ease-out;
 }
 .results_section,.results_list{
@@ -1712,7 +1712,7 @@
     text-align: center;
     border: 1px solid #dcdcdc;
     border-radius: 3px;
-    background: url(../image/libg2.jpg) left center no-repeat;
+    background: url(../images/libg2.jpg) left center no-repeat;
     overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;

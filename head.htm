@@ -268,7 +268,7 @@
             {ms:channel type="son" orderby="sort" order="desc"}
             <li>
                 <#if field.typeid == 27>
-                <a href="${field.typelink}" title="${field.typetitle}">${field.typetitle}</a>
+                <a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a>
                 <#else>
                     <a href="<#if field.typeurl != "" >${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>" title="${field.typetitle}">${field.typetitle}</a>
                 </#if>
