@@ -31,6 +31,7 @@
                     <div class="page_cont_box clear">
                         <!-- 学会资讯区域 -->
                         <div class="information_section">
+                            <#if page.total != 0>
                             <!-- 标题区域 -->
                             <div class="wrap_title">${field.typetitle}</div>
                             <!-- 标题区域结束 -->
@@ -57,21 +58,21 @@
                                 </li>
                                 {/ms:arclist}
                             </ul>
+                            <#else>
+                            <p>暂无内容</p>
+                            </#if>
                             <!-- 列表区域结束 -->
                             <!--分页区域-->
                             <div class="pages">
+                                <#if page.total != 0>
                                 <ul class="pagination">
                                     <li class="first"><a href="{ms:global.url/}{ms:page.index/}">首页</a></li>
                                     <li class="prev"><a href="{ms:global.url/}{ms:page.pre/}">上一页</a></li>
                                     <li class="active"><a href="javascript:;" data-page="{ms:page.cur/}">{ms:page.cur/}</a></li>
-
-<!--                                    <li><a href="javascript:;" data-page="2">2</a></li>-->
-<!--                                    <li><a href="javascript:;" data-page="3">3</a></li>-->
-<!--                                    <li><a href="javascript:;" data-page="4">4</a></li>-->
-<!--                                    <li><a href="javascript:;" data-page="5">5</a></li>-->
                                     <li class="next"><a href="{ms:global.url/}{ms:page.next/}" data-page="{ms:page.next/}">下一页</a></li>
-                                    <li class="last"><a href="{ms:global.url/}{ms:page.last/}" data-page="{ms:page.last/}">末页</a></li>
+                                    <li class="last"><a href="{ms:global.url/}{ms:page.last/}" data-page="{ms:page.last/}" total="{ms:page.total/}">末页</a></li>
                                 </ul>
+                                </#if>
                             </div>
                             <!--分页区域结束-->
                         </div>
