@@ -1,24 +1,50 @@
 <!-- banner区域 -->
-<div class="banner">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            {ms:arclist titlelen=45 typeid=1}
-            <div class="swiper-slide">
-                <!-- 图片区域 -->
+<div class="bannerDiv">
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {ms:arclist titlelen=45 typeid=1}
+                <div class="swiper-slide">
+                    <!-- 图片区域 -->
                     <div class="img_box">
                         <a target="_blank" href="{ms:global.url/}${field.source}"><img src="${field.litpic}">
                             <div class="cover_title">${field.title}</div>
                         </a>
                     </div>
-                <!-- 图片区域结束 -->
+                    <!-- 图片区域结束 -->
+                </div>
+                {/ms:arclist}
             </div>
-            {/ms:arclist}
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+    </div>
+    <div class="learnNews">
+        <dl class="news-box">
+            <dt>
+                {ms:channel type="self" typeid=35}
+                <div class="news-title fl">
+                    <a href="#">${field.typetitle}</a>
+                </div>
+                <div class="news-more fr">
+                    <a href="{ms:global.url/}${field.typelink}">更多+</a>
+                </div>
+                {/ms:channel}
+            </dt>
+            <dd class="clear">
+                <ul>
+                    {ms:arclist size=10 orderby="sort" order="desc" typeid=35}
+                        <li>
+                            <a href="{ms:global.url/}${field.link}" target="_blank"><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a>
+                            <span class="mydate">${field.date?string("yyyy-MM-dd")}</span>
+                        </li>
+                    {/ms:arclist}
+                </ul>
+            </dd>
+        </dl>
     </div>
 </div>
 <!-- banner区域结束 -->

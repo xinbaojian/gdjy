@@ -1,7 +1,7 @@
 
 /* CSS Document */
 .wrap{
-    background: url(../images/bg1.png) top center no-repeat;
+    /*background: url(../images/bg1.png) top center no-repeat;*/
 }
 .header{
     width: 100%;
@@ -280,6 +280,12 @@
     margin-right: 10px;
     color: #999; 
 }
+
+.swiper-pagination-bullet{
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+}
 .nav > ul > li .menu_nav{
     position: absolute;
     left: 0;
@@ -314,28 +320,60 @@
     color: #fff;
     background: #578bed;
 }
+
+.bannerDiv{
+    width: 100%;
+    height: 420px;
+    display: flex;
+}
+
 .banner{
     position: relative;
     margin: 30px 0;
-    width: 100%;
-    height: 450px;
+    width: 40%;
+    height: 360px;
     overflow: hidden;
 }
+
+.learnNews{
+    width: 58%;
+    height: 360px;
+    display: inline-block;
+    margin: 30px 0;
+    margin-left: 2%;
+}
+
+.learnNews dt{
+    border-bottom: 1px solid #dcdcdc;
+    line-height: 44px;
+    height: 44px;
+    font-size: 20px;
+}
+
+.news-title{
+    font-size: 26px;
+    color: #2690de;
+    border-left: 8px solid #2690de;
+    padding-left: 10px;
+}
+
+.fr{
+    float: right;
+}
+
 .swiper-container {
     width: 100%;
     height: 100%;
 }
 .banner .swiper-slide{
-    width: 750px;
-    height: 450px;
+    width: 480px;
+    height: 360px;
     overflow: hidden;
-    
-
 }
 .banner .swiper-slide .img_box{
     position: relative;
-    width: 750px;
-    height: 450px;
+    width: 480px;
+    height: 360px;
     overflow: hidden;
     opacity: .5;
     -webkit-opacity: .5;
@@ -361,7 +399,7 @@
 }
 .banner .swiper-slide .img_box img{
     width: 100%;
-    height: 450px;
+    height: 360px;
     transition: all .4s ease-in;
 	-moz-transition: all .4s ease-in;
 	-webkit-transition: all .4s ease-in;
@@ -432,7 +470,7 @@
     right: 0;
 }
 .banner .swiper-container-horizontal>.swiper-pagination-bullets, .banner .swiper-pagination-custom, .banner .swiper-pagination-fraction{
-    right: 240px;
+    right:40px;
     left: inherit;
     bottom: 15px;
     width: auto;
@@ -608,6 +646,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.fl{
+    float: left;
 }
 
 .footer{
@@ -1447,7 +1489,10 @@
 .panel_leader_right .panel_leader_head .item_list{
     float: left;
     margin-left: 15px;
-   
+    line-height: 36px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
 }
 .panel_leader_right .panel_leader_head .item_list p{
     font-size: 18px;
@@ -1619,8 +1664,8 @@
     overflow: hidden;
 }
 .research_box_left{
-    /* float: left; */
-    width: 100%;
+    float: left;
+    width: 715px;
 }
 .research_box_left .research_text{
     padding-bottom: 20px;
@@ -1874,6 +1919,15 @@
 .btn20{
     right: 30px;
 
+}
+
+a{
+    color: #3e3e3e;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#2690de;
 }
 
 /*********************************** 滑过样式 ************************************/
