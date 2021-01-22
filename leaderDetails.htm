@@ -11,7 +11,7 @@
     <!-- 整体区域 -->
     <div class="wrap">
         <!-- 中间区域 -->
-        <div class="w1200 clear">
+        <div class="clear">
             <#include "head.htm" />
             <style>
                 table[align="center"] {
@@ -19,7 +19,7 @@
                 }
             </style>
             <!-- 内容区域 -->
-            <div class="content">
+            <div class="content w1200">
                 <!-- 子页内容区域 -->
                 <div class="page_content">
                     <!-- 面包屑导航区域 -->
@@ -59,7 +59,7 @@
                                             <lable>${field.title}</lable>
                                             <!-- 右区域 -->
                                             <div class="item_list">
-                                                ${field.descrip}
+                                                <p>${field.descrip}</p>
                                             </div>
                                             <!-- 右区域结束 -->
                                         </div>
@@ -68,7 +68,7 @@
                                     <!-- 右区域结束-->
                                 </div>
                                 </#if>
-                                <h6 class="page_title">学会简介</h6>
+                                <!-- <h6 class="page_title">学会简介</h6> -->
                                 <!-- 领导区域结束 -->
                                 <!-- 领导详情文字区域 -->
                                 <div class="branch_text_box">

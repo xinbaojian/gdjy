@@ -12,11 +12,16 @@
 <!-- 整体区域 -->
 <div class="wrap">
     <!-- 中间区域 -->
-    <div class="w1200 clear">
+    <div class=" clear">
         <#include "head.htm"/>
         <#include "banner.htm"/>
         <!-- 内容区域 -->
-        <div class="content">
+        <!-- banner区域结束 -->
+        <div class="part2 w1200">
+          
+        </div>
+        <!-- 内容区域 -->
+        <div class="content w1200">
             <div class="part1">
                 <div class="learnNews news-b">
                     <dl class="news-box">
@@ -107,92 +112,6 @@
                     </dl>
                 </div>
             </div>
-
-            <!-- 第三块区域 -->
-            <div class="link_section">
-                <!-- 选项卡标题区域 -->
-                <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon11.png">
-                    <ul>
-                        <li>主管单位</li>
-                        <li>直属单位</li>
-                        <li>会员高校</li>
-                        <li>友情链接</li>
-                    </ul>
-                </div>
-                <!-- 选项卡标题区域结束 -->
-                <!-- 友情链接内容区域 -->
-                <div class="link_section_box">
-                    <div class="bd">
-                        <!-- 主管单位区域 -->
-                        <div class="link_list">
-                            <div class="link_list_slide">
-                                <ul>
-                                    <!-- 第一页区域 -->
-                                    <li>
-                                        {ms:channel typeid=66 orderby="sort" order="desc"}
-                                        <a target="_blank" href="${field.typeurl}" title="${field.typetitle}">${field.typetitle}</a>
-                                        {/ms:channel}
-                                    </li>
-                                    <!-- 第一页区域结束 -->
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="link_list">
-                            <div class="link_list_slide">
-                                <ul>
-                                    <!-- 第一页区域 -->
-                                    <li>
-                                        {ms:channel typeid=69 orderby="sort" order="desc"}
-                                        <a target="_blank" href="${field.typeurl}" title="${field.typetitle}">${field.typetitle}</a>
-                                        {/ms:channel}
-                                    </li>
-                                    <!-- 第一页区域结束 -->
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="link_list">
-                            <div class="link_list_slide">
-                                <ul>
-                                    {ms:channel type="self" typeid=72}
-                                    {ms:arclist}
-                                    <#if field.index==1 || field.index==13 || field.index==25>
-                                        <li>
-                                    </#if>
-                                    <p><a target="_blank" href="{ms:global.url/}[field.link/]" title="${field.title}">${field.title}</a></p>
-                                    <#if field.index==12 || field.index=24 || field.index=36>
-                                    </li>
-                                    </#if>
-                                    {/ms:arclist}
-                                    {/ms:channel}
-
-                                    <!-- 第一页区域结束 -->
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="link_list">
-                            <div class="link_list_slide">
-                                <ul>
-                                    {ms:channel typeid=74 orderby="sort" order="desc" }
-                                        <#if field.typeindex==1 || field.typeindex==13 || field.typeindex==25>
-                                            <li>
-                                        </#if>
-                                        <a target="_blank" href="${field.typeurl}" title="${field.typetitle}">${field.typetitle}</a>
-                                        <#if field.typeindex==12 || field.typeindex=24 || field.typeindex=36>
-                                        </li>
-                                        </#if>
-                                    {/ms:channel}
-                                    <!-- 第一页区域 -->
-
-                                    <!-- 第一页区域结束 -->
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- 主管单位区域结束 -->
-                    </div>
-                </div>
-                <!-- 友情链接内容区域结束 -->
-            </div>
-            <!-- 第三块区域结束 -->
         </div>
         <!-- 内容区域结束 -->
 

@@ -14,10 +14,10 @@
     <!-- 整体区域 -->
     <div class="wrap">
         <!-- 中间区域 -->
-        <div class="w1200 clear">
+        <div class="clear">
             <#include "head.htm"/>
             <!-- 内容区域 -->
-            <div class="content">
+            <div class="content w1200">
                 <!-- 子页内容区域 -->
                 <div class="page_content">
                     <!-- 面包屑导航区域 -->
@@ -33,7 +33,7 @@
                         <!-- 治理架构区域 -->
                         <div class="structure_section">
                             <div id="chart-container">
-
+                                <img src="${field.typelitpic}" alt="">
                             </div>
                         </div>
                         <!-- 治理架构区域结束 -->
@@ -43,10 +43,8 @@
                 <!-- 子页内容区域结束 -->
             </div>
             <!-- 内容区域结束 -->
-
         </div>
         <!-- 中间区域结束 -->
-
         <!-- 底部区域 -->
         <#include "footer.htm"/>
         <!-- 底部区域结束 -->
@@ -60,11 +58,11 @@
 
 <#include "common.htm"/>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     $(function() {
-
+        
     var datascource = {
-      'name': '中国高等教育学会治理架构',
+      'name': '湖北省高等教育学会治理构架',
       'className':'top-level',
       'children': [
         { 
@@ -72,18 +70,13 @@
             'className': 'middle-level'
         },
         { 
-            'name': '学术咨询机构', 
+            'name': '学术机构', 
             'className': 'middle-level',
             'children':[
                 {
                     "name":"学术委员会",
                     'className': 'frontend1',
-                    "url":"http://www.baidu.com"
                 },
-                {
-                    "name":"会刊编委会",
-                    'className': 'frontend1',
-                }
             ]
         },
         {
@@ -116,11 +109,28 @@
         },
         {
             'name':"执行机构",
-            'className': 'middle-level'
-        },
-        {
-            'name':"监督机构",
-            'className': 'middle-level'
+            'className': 'middle-level',
+            "children":[
+                {
+                    "name":"秘书处",
+                    'className': 'frontend1',
+                    children:[
+                        {
+                            name:"综合办公室",
+                            'className': 'frontend1',
+                        },
+                        {
+                            "name":"会企办公室",
+                            'className': 'frontend1',
+                        },
+                        {
+                            name:"事业发展办公室",
+                            'className': 'frontend1',
+                        }
+                    ]
+                },
+                
+            ]
         },
         {
             'name':"会员单位",
@@ -146,5 +156,5 @@
             }
         }
     });
-});
-</script>
+}); -->
+<!-- </script> -->
