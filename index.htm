@@ -12,7 +12,13 @@
 <!-- 整体区域 -->
 <div class="wrap">
     <!-- 中间区域 -->
-    <div class=" clear">
+    <div class="clear posi">
+        <div class="qr_code">
+            <div class="qrcode_img">
+                <span class="closepop" onclick="closePop()" id="closepop">x</span>
+                <img src="{ms:global.host/}/{ms:global.style/}/images/5f28cba4773f5.jpg">
+            </div> 
+        </div>
         <#include "head.htm"/>
         <#include "banner.htm"/>
         <!-- 内容区域 -->
@@ -23,7 +29,7 @@
         <!-- 内容区域 -->
         <div class="content w1200">
             <div class="part1">
-                <div class="learnNews news-b">
+                <!-- <div class="learnNews news-b">
                     <dl class="news-box">
                         <dt>
                             {ms:channel type="self" typeid=37}
@@ -110,7 +116,206 @@
                             </ul>
                         </dd>
                     </dl>
+                </div> -->
+                <!-- 第一块区域 -->
+            <div class="news_section">
+                <!-- 左区域 -->
+                <div class="news_tab Left">
+                    <!-- 盒子区域 -->
+                    <div class="news_tab_box">
+                        <!-- 选项卡标题区域 -->
+                        <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon2.png">
+                            <ul>
+                                <li>
+                                    {ms:channel type="self" typeid=35}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                    </li>|
+                                <li>
+                                    {ms:channel type="self" typeid=24}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 选项卡标题区域结束 -->
+                        <!-- 选项卡内容区域 -->
+                        <div class="bd">
+                            <!-- 学会资讯-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=3 orderby="sort" order="desc" typeid=35}
+                                    <li>
+                                        <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                        <p class="profile" >${field.descrip}</p>
+                                        </a>
+                                    </li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 学会资讯-结束 -->
+                            <!-- 分会纵横区域 -->
+                            <ul class="index_list">
+                                {ms:arclist size=3 orderby="sort" order="desc" typeid=24}
+                                <li>
+                                    <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                        <p class="profile" >${field.descrip}</p>  
+                                    </a>
+                                </li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 分会纵横区域结束 -->
+                        </div>
+                        <!-- 选项卡内容区域结束 -->
+                    </div>
+                    <!-- 盒子区域结束 -->
                 </div>
+
+                <div class="news_tab Left ml30">
+                    <!-- 盒子区域 -->
+                    <div class="news_tab_box">
+                        <!-- 选项卡标题区域 -->
+                        <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon4.png">
+                            <ul>
+                                <li>
+                                    {ms:channel type="self" typeid=36}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>|<li>
+                                {ms:channel type="self" typeid=37}
+                                <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                {/ms:channel}
+                            </li>
+                            </ul>
+                        </div>
+                        <!-- 选项卡标题区域结束 -->
+                        <!-- 选项卡内容区域 -->
+                        <div class="bd">
+                            <!-- 会议通知-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=3 orderby="sort" order="desc" typeid=36}
+                                <li>
+                                    <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                        <p class="profile" >${field.descrip}</p>  
+                                    </a>
+                                </li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 会议通知-结束 -->
+                            <!-- 业务公告-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=3 orderby="sort" order="desc" typeid=37}
+                                <li>
+                                    <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                        <p class="profile" >${field.descrip}</p>  
+                                    </a>
+                                </li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 业务公告-结束 -->
+                        </div>
+                        <!-- 选项卡内容区域结束 -->
+                    </div>
+                    <!-- 盒子区域结束 -->
+                </div>
+
+                <div class="news_tab Left mt20">
+                    <!-- 盒子区域 -->
+                    <div class="news_tab_box">
+                        <!-- 选项卡标题区域 -->
+                        <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/icon3.png">
+                            <ul>
+                                <li>
+                                    {ms:channel type="self" typeid=17}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>|
+                                <li>
+                                    {ms:channel type="self" typeid=16}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 选项卡标题区域结束 -->
+                        <!-- 选项卡内容区域 -->
+                        <div class="bd">
+                            <!-- 智库观点-开始 -->
+                                <ul class="index_list">
+                                    {ms:arclist size=3 orderby="sort" order="desc" typeid=17}
+                                    <li>
+                                        <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                            <p class="profile" >${field.descrip}</p>  
+                                        </a>
+                                    </li>
+                                    {/ms:arclist}
+                                </ul>
+                            <!-- 智库观点-结束 -->
+                            <!-- 会刊精选-开始 -->
+                                <ul class="index_list">
+                                    {ms:arclist size=3 orderby="sort" order="desc" typeid=16}
+                                    <li>
+                                        <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                            <p class="profile" >${field.descrip}</p>  
+                                        </a>
+                                    </li>
+                                    {/ms:arclist}
+                                </ul>
+                            <!-- 会刊精选-结束 -->
+                        </div>
+                        <!-- 选项卡内容区域结束 -->
+                    </div>
+                    <!-- 盒子区域结束 -->
+                </div>
+
+                <div class="news_tab Left ml30 mt20">
+                    <!-- 盒子区域 -->
+                    <div class="news_tab_box">
+                        <!-- 选项卡标题区域 -->
+                        <div class="hd"><img src="{ms:global.host/}/{ms:global.style/}/images/.png">
+                            <ul>
+                                <li>
+                                    {ms:channel type="self" typeid=15}
+                                    <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                    {/ms:channel}
+                                </li>|<li>
+                                {ms:channel type="self" typeid=14}
+                                <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                                {/ms:channel}
+                            </li>
+                            </ul>
+                        </div>
+                        <!-- 选项卡标题区域结束 -->
+                        <!-- 选项卡内容区域 -->
+                        <div class="bd">
+                            <!-- 会议通知-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=5 orderby="sort" order="desc" typeid=15}
+                                <li>
+                                    <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                        <p class="profile" >${field.descrip}</p>  
+                                    </a>
+                                </li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 会议通知-结束 -->
+                            <!-- 业务公告-开始 -->
+                            <ul class="index_list">
+                                {ms:arclist size=5 orderby="sort" order="desc" typeid=14}
+                                <li>
+                                    <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
+                                        <p class="profile" >${field.descrip}</p>  
+                                    </a>
+                                </li>
+                                {/ms:arclist}
+                            </ul>
+                            <!-- 业务公告-结束 -->
+                        </div>
+                        <!-- 选项卡内容区域结束 -->
+                    </div>
+                    <!-- 盒子区域结束 -->
+                </div>
+            </div>
+            <!-- 第一块区域结束 -->
+
             </div>
         </div>
         <!-- 内容区域结束 -->
@@ -128,3 +333,8 @@
 </body>
 </html>
 <#include "common.htm"/>
+<script type="text/javascript">
+    function closePop(){
+        $(".qr_code").hide();
+    }
+</script>

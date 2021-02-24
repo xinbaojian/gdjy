@@ -2,29 +2,63 @@
     <!-- 中间区域 -->
     <div class="w1200 clear">
         <!-- 左区域 -->
-        <div class="foot_logo">
+        <!-- <div class="foot_logo">
             <img src="{ms:global.host/}/{ms:global.style/}/images/logo2.png">
-        </div>
+        </div> -->
         <!-- 左区域结束 -->
         <!-- 中间区域 -->
         <div class="foot_center">
             <p>学会地址：武汉市东湖高新区文华园路8号文华学院行政楼一楼</p>
-            <p>综合办公室：027-87003861</p>
-            <p>会企合作办：027-87003857</p>
-            <p>副秘书长办公室: 027-87003853、87003617</p>
+            <p>友情链接：
+                <a href="http://www.moe.gov.cn" target="_blank">中国教育部</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.cahe.edu.cn/" target="_blank">中国高等教育学会</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="http://jyt.hubei.gov.cn/" target="_blank">湖北省教育厅</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="" id="selectb"  onchange="sb_click(this)" style="border: none;height: 30px;border-radius: 8px;">
+                </select>
+            </p>
             <p>
                 <!-- <a href="javascript:;" target="_blank">京ICP备20026207号-1</a> -->
-                湖北省高等教育学会版权所有
+                湖北省高等教育学会版权所有&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="http://www.qi-tech.com.cn/" target="_blank">技术支持：奇观技术</a>
             </p>
                         <!-- <p>网站浏览量：85510</p> -->
         </div>
         <!-- 中间区域结束 -->
         <!-- 右区域 -->
-        <div class="foot_right">
+        <!-- <div class="foot_right">
             <img src="{ms:global.host/}/{ms:global.style/}/images/5f28cba4773f5.jpg">
-        </div>
+        </div> -->
         <!-- 右区域结束 -->
     </div>
     <!-- 中间区域结束 -->
 </div>
+
+<script type="text/javascript">
+        add();
+        function add(){
+            $.get("/cms/links/list",function(data){
+                if(data.data.rows){
+                    var obj = data.data.rows;
+                    var objlen = obj.length;
+                    for (var i = 0; i < objlen; i++) {
+                        var pro = obj[i];
+                        document.getElementById("selectb").options.add(new Option(pro.linkName, pro.links));//使用纯js为select动态添加option
+                    }
+                }
+            });
+        }    
+        function sb_click(obj) {
+            var num = 0;
+            for (var i = 0; i < obj.options.length; i++) {
+                if (obj.options[i].selected == true) {
+                    num++;
+                }
+            }
+            if (num == 1) {
+                var url = obj.options[obj.selectedIndex].value;
+                window.open(url,'_target'); //打开连接方式
+            }
+        }
+
+        
+</script>

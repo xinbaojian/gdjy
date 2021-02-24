@@ -30,18 +30,20 @@
                     <div class="page_cont_box clear">
                         <!-- 智库观点区域 -->
                         {ms:channel type="self" typeid=17}
-                        <div class="what_section">
+                        <div class="what_section" style="margin-bottom: 80px;">
                             <!-- 标题区域 -->
                             <div class="wrap_title"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></div>
                             <!-- 标题区域结束 -->
                             <!-- 盒子区域 -->
-                            <div class="what_box">
+                            <!-- <div class="what_box"> -->
                                 <!-- 左区域 -->
-                                <div class="what_box_left"><img src="${field.typelitpic}"></div>
+                                <!-- <div class="what_box_left">
+                                    <img src="${field.typelitpic}">
+                                </div> -->
                                 <!-- 左区域结束 -->
                                 <!-- 右区域 -->
-                                <div class="what_box_right">
-                                    <!-- 第一块区域 -->
+                                <!-- <div class="what_box_right">
+                                    先注释掉学术动态智库观点-
                                     <div class="news_first">
                                         {ms:arclist size=1 orderby="date" order="desc"}
                                         <a href="{ms:global.url/}${field.link}">
@@ -50,8 +52,6 @@
                                         </a>
                                         {/ms:arclist}
                                     </div>
-                                    <!-- 第一块区域结束 -->
-                                    <!-- 列表区域 -->
                                     <ul class="first_list two">
                                         {ms:arclist size=5 orderby="date" order="desc"}
                                         <#if field.index != 1 >
@@ -59,10 +59,9 @@
                                         </#if>
                                         {/ms:arclist}
                                     </ul>
-                                    <!-- 列表区域结束 -->
-                                </div>
+                                </div> -->
                                 <!-- 右区域结束 -->
-                            </div>
+                            <!-- </div> -->
                             <!-- 盒子区域结束 -->
                         </div>
                         {/ms:channel}
@@ -74,10 +73,9 @@
                             <div class="wrap_title"><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></div>
                             <!-- 标题区域结束 -->
                             <!-- 内容区域 -->
-                            <div class="research_box">
-                                <!-- 左区域 -->
+                            <!--科研参考--->
+                            <!-- <div class="research_box">
                                 <div class="research_box_left">
-                                    <!-- 文字区域 -->
                                     <div class="research_text">
                                         {ms:arclist size=1 orderby="date" order="desc"}
                                         <h6><a href="{ms:global.url/}${field.link}">${field.title}</a></h6>
@@ -88,8 +86,6 @@
                                         </p>
                                         {/ms:arclist}
                                     </div>
-                                    <!-- 文字区域结束 -->
-                                    <!-- 列表区域 -->
                                     <ul class="first_list two">
                                         {ms:arclist size=5 orderby="date" order="desc"}
                                         <#if field.index != 1 >
@@ -97,18 +93,15 @@
                                         </#if>
                                         {/ms:arclist}
                                     </ul>
-                                    <!-- 列表区域结束 -->
                                 </div>
-                                <!-- 左区域结束 -->
-                                <!-- 右区域 -->
-                                <!-- <div class="research_box_right">
+                                <div class="research_box_right">
                                     <ul>
                                         <li><a href="javascript:;"><img src="static/picture/5f559b2d96aaa.jpg"></a></li>
                                         <li><a href="javascript:;"><img src="static/picture/5f559b507e555.jpg"></a></li>
                                     </ul>
-                                </div> -->
-                                <!-- 右区域结束 -->
-                            </div>
+                                </div>
+                                右区域结束
+                            </div> -->
                             <!-- 内容区域结束 -->
                             {/ms:channel}
                         </div>

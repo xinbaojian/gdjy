@@ -10,7 +10,7 @@
         <div class="head_search">
             <div class="search_box">
                 <form id="searchDataForm" action="{ms:global.host/}/mcms/search.do" method="post">
-                    <input type="text" value="" id="keywords" class="keywords" name="content_title"
+                    <input type="text" value="{ms:search.content_title/}" id="keywords" class="keywords" name="content_title"
                         placeholder="请输入搜索内容">
                     <button type="submit"><img src="{ms:global.host/}/{ms:global.style/}/images/icon1.png"></button>
                 </form>
@@ -22,7 +22,7 @@
 </div>
 <!-- 头部区域结束 -->
 <!-- 导航区域 -->
-<div class="navDiv" style="width: 100%;background: rgb(38, 144, 222);">
+<div class="navDiv" style="width: 100%;background: #094b7a;">
         <div class="nav w1200">
                 <ul>
                     <li class="nav_first navli">
@@ -46,7 +46,7 @@
                                             <!-- 左区域 -->
                                             <div class="nav_leader_left">
                                                 {ms:channel type="self" typeid=11}
-                                                {ms:arclist}
+                                                {ms:arclist typeid=11}
                                                 <a href="{ms:global.url/}${field.link}">
                                                     <img src="${field.litpic}">
                                                     <h6>会长 ${field.title}</h6>
@@ -135,19 +135,44 @@
                 {ms:channel type="self" typeid=5}
                 <!-- 标题区域 -->
                 <div class="wrap_title">
-                        <!-- href="{ms:global.url/}${field.typelink} -->
                     <a target="_blank">
                         ${field.typetitle}
                     </a>
                 </div>
                 <!-- 标题区域结束 -->
-                <!-- 图片区域 -->
-                <div class="nav_strategy_img">
-                    <!-- <a href="{ms:global.url/}${field.typelink}"><img src="${field.typelitpic}"></a> -->
-                </div>
-                <!-- 图片区域结束 -->
-                <!-- {/ms:channel} -->
+                 {/ms:channel}
             </div>
+            <div class="nav_strategy">
+                <div class="wrap_title">
+                    <a target="_blank">
+                        学会会员
+                    </a>
+                </div>
+<!--                <div class="nav_strategy_img">-->
+                    <!-- <a href="{ms:global.url/}${field.typelink}"><img src="${field.typelitpic}"></a> -->
+<!--                </div>-->
+            </div>
+            <div class="nav_strategy">
+                <div class="wrap_title">
+                    <a target="_blank">
+                        会员单位
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="nav_strategy">
+                <div class="wrap_title">
+                    <a target="_blank">
+                        学会理事
+                    </a>
+                </div>
+            </div>
+            <div class="nav_strategy">
+                <div class="wrap_title">
+                    <a target="_blank">
+                        常务理事
+                    </a>
+                </div>
+            </div> -->
             <!-- 发展战略区域结束 -->
             </div>
             <!-- 左区域结束 -->
