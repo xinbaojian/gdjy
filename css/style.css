@@ -504,14 +504,14 @@
 }
 .news_tab{
     width: 585px;
-    height: 218px;
+    height:360px;
     overflow: hidden;
 }
 .news_tab .news_tab_box{
     padding: 20px;
     padding-bottom: 10px;
     border: 1px solid #dcdcdc;
-    border-top: 3px solid #759dec;
+    border-top: 3px solid #094b7a;
     overflow: hidden;
 }
 .news_tab .hd{
@@ -547,7 +547,7 @@
 }
 .index_list{
     width: 100%;
-    height: 150px;
+    height: 284px;
     margin-top: 7px;
     overflow: hidden;
 }
@@ -2073,14 +2073,17 @@ ul{
 }
 
 .profile{
-    text-indent: 1em;
-    text-overflow: -o-ellipsis-lastline;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* display: -webkit-box; */
+    display: -webkit-box;
     -webkit-line-clamp: 2;
-    line-clamp: 2;
     -webkit-box-orient: vertical;
+    display: -moz-box;
+    -moz-line-clamp: 2;
+    -moz-box-orient: vertical;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;    
 }
 
 .posi{
