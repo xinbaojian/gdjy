@@ -2,7 +2,7 @@
 /* CSS Document */
 .header{
     width: 100%;
-    height: 130px;
+    height: 150px;
     position: relative;
 }
 .header .logo{
@@ -15,8 +15,8 @@
 }
 
 .header .logo img{
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
 }
 
 .header .head_right{
@@ -962,7 +962,7 @@
     padding-top: 15px;
     width: 100%;
     overflow: hidden;
-    min-height: 230px;
+    min-height:315px;
 }
 .branch_text_box p,.branch_text_box p span,.branch_text_box{
     font-size: 20px;
