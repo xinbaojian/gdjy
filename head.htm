@@ -147,6 +147,34 @@
                         ${field.typetitle}
                     </a>
                 </div>
+                <div class="nav_regulation_section">
+                    <!-- 列表区域 -->
+                    <ul class="nav_regulation_list">
+                        {ms:arclist size=1 orderby="date"}
+                        <li>
+                            <a href="{ms:global.url/}${field.link}" title="${field.title}" style="font-size: 16px;">
+                                <span>•</span>
+                                ${field.title}
+                            </a>
+                        </li>
+                        {/ms:arclist}
+                    </ul>
+                    <!-- 列表区域结束 -->
+                </div>
+
+                <!-- <div class="nav_regulation_section">
+                    <ul>
+                        <li class="nav_regulation_list">
+                            {ms:arclist size=1 orderby="date"}
+                                <a href="{ms:global.url/}${field.link}" title="${field.title}">
+                                    <span>•</span>
+                                    ${field.title}
+                                </a>
+                            {/ms:arclist}
+                            
+                        </li>
+                    </ul>
+                </div> -->
                 <!-- 标题区域结束 -->
                  {/ms:channel}
             </div>

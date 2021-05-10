@@ -2093,9 +2093,9 @@ ul{
 .qr_code{
     width: 110px;
     height: 100px;
-    position: absolute;
+    position: fixed;
     right: 152px;
-    bottom: 456px;
+    bottom:0;
 }
 
 .qrcode_img{
