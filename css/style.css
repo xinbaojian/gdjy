@@ -112,6 +112,7 @@
     -moz-box-shadow:2px 2px 7px rgba(148,148,148,.15); 
     -webkit-box-shadow:2px 2px 7px rgba(148,148,148,.15); 
     box-shadow:2px 2px 7px rgba(148,148,148,.15); 
+    display: none;
 }
 .nav_survey_section{
     padding: 20px;

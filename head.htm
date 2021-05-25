@@ -139,44 +139,33 @@
                 </div>
             </div>
             <!-- 发展战略区域 -->
-            <div class="nav_strategy">
-                {ms:channel type="self" typeid=5}
-                <!-- 标题区域 -->
+            <div class="nav_strategy" >
+                {ms:channel type="self" typeid=81}
+                    <div class="wrap_title">
+                        <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                        <!-- <a  href="${global.url}/xuehuimishuchu/index.html">发展战略</a> -->
+                    </div>
+                {/ms:channel}
+                <!-- {ms:channel type="self" typeid=5}
                 <div class="wrap_title">
                     <a target="_blank">
                         ${field.typetitle}
                     </a>
                 </div>
                 <div class="nav_regulation_section">
-                    <!-- 列表区域 -->
                     <ul class="nav_regulation_list">
                         {ms:arclist size=1 orderby="date"}
-                        <li>
-                            <a href="{ms:global.url/}${field.link}" title="${field.title}" style="font-size: 16px;">
-                                <span>•</span>
-                                ${field.title}
-                            </a>
-                        </li>
-                        {/ms:arclist}
-                    </ul>
-                    <!-- 列表区域结束 -->
-                </div>
-
-                <!-- <div class="nav_regulation_section">
-                    <ul>
-                        <li class="nav_regulation_list">
-                            {ms:arclist size=1 orderby="date"}
-                                <a href="{ms:global.url/}${field.link}" title="${field.title}">
+                            <li>
+                                <a href="{ms:global.url/}${field.link}" title="${field.title}" style="font-size: 16px;">
                                     <span>•</span>
                                     ${field.title}
                                 </a>
-                            {/ms:arclist}
-                            
-                        </li>
+                            </li>
+                        {/ms:arclist}
                     </ul>
-                </div> -->
-                <!-- 标题区域结束 -->
-                 {/ms:channel}
+                </div>
+                 {/ms:channel} -->
+
             </div>
             
             <div class="nav_strategy">

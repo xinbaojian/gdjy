@@ -13,12 +13,12 @@
 <div class="wrap">
     <!-- 中间区域 -->
     <div class="clear posi">
-        <div class="qr_code">
+        <!-- <div class="qr_code">
             <div class="qrcode_img">
                 <span class="closepop" onclick="closePop()" id="closepop">x</span>
                 <img src="{ms:global.host/}/{ms:global.style/}/images/5f28cba4773f5.jpg">
             </div> 
-        </div>
+        </div> -->
         <#include "head.htm"/>
         <#include "banner.htm"/>
         <!-- 内容区域 -->
@@ -143,7 +143,7 @@
                         <div class="bd">
                             <!-- 学会资讯-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=6 order="desc" typeid=35}
+                                {ms:arclist size=10 order="desc" typeid=35}
                                     <li>
                                         <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p> -->
@@ -154,7 +154,7 @@
                             <!-- 学会资讯-结束 -->
                             <!-- 分会纵横区域 -->
                             <ul class="index_list">
-                                {ms:arclist size=6 order="desc" typeid=24}
+                                {ms:arclist size=10 order="desc" typeid=24}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -191,7 +191,7 @@
                         <div class="bd">
                             <!-- 会议通知-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=6 order="desc" typeid=36}
+                                {ms:arclist size=10 order="desc" typeid=36}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -202,7 +202,7 @@
                             <!-- 会议通知-结束 -->
                             <!-- 业务公告-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=6 order="desc" typeid=37}
+                                {ms:arclist size=10 order="desc" typeid=37}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -240,7 +240,7 @@
                         <div class="bd">
                             <!-- 智库观点-开始 -->
                                 <ul class="index_list">
-                                    {ms:arclist size=6 order="desc" typeid=17}
+                                    {ms:arclist size=10 order="desc" typeid=17}
                                     <li>
                                         <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                             <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -251,7 +251,7 @@
                             <!-- 智库观点-结束 -->
                             <!-- 会刊精选-开始 -->
                                 <ul class="index_list">
-                                    {ms:arclist size=6 order="desc" typeid=16}
+                                    {ms:arclist size=10 order="desc" typeid=16}
                                     <li>
                                         <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                             <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -288,7 +288,7 @@
                         <div class="bd">
                             <!-- 会议通知-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=6 order="desc" typeid=15}
+                                {ms:arclist size=10 order="desc" typeid=15}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -299,7 +299,7 @@
                             <!-- 会议通知-结束 -->
                             <!-- 业务公告-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=6 order="desc" typeid=14}
+                                {ms:arclist size=10 order="desc" typeid=14}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
