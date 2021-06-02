@@ -38,7 +38,7 @@
                             <!-- 标题区域结束 -->
                             <!-- 第一块新闻区域 -->
                             <div class="news_first_box">
-                                {ms:arclist size=1 orderby="date" typeid=34}
+                                {ms:arclist size=1 orderby="date"  order="desc" typeid=34}
                                 <a href="{ms:global.url/}${field.link}">
                                     <!-- 图片区域 -->
                                     <div class="img_box"><img src="${field.litpic}"></div>
@@ -60,7 +60,7 @@
                             <!-- 第一块新闻区域结束 -->
                             <!-- 列表区域 -->
                             <ul class="first_list">
-                                {ms:arclist size=5 orderby="date" typeid=34}
+                                {ms:arclist size=5 orderby="date"  order="desc" typeid=34}
                                 <#if field.index != 1>
                                 <li>
                                     <a href="{ms:global.url/}${field.link}">
