@@ -35,11 +35,11 @@
                             <!-- 标题区域结束 -->
                             <!-- 列表区域 -->
                             <ul class="three_list">
-                                {ms:channel typeid=20 order="desc"}
+                                {ms:channel typeid=20 orderby="date"}
                                 <li>
                                     <div class="item_box">
                                         <a href='
-                                        {ms:channel type="son"  orderby="sort" order="desc"}
+                                        {ms:channel type="son"  orderby="sort" orderby="date"}
                                         <#if field.typeindex == 1>
                                         {ms:global.url/}${field.typelink}
                                         </#if>

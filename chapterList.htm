@@ -30,7 +30,7 @@
                     <!-- 左侧导航区域 -->
                     <div class="sidenav">
                         <ul>
-                            {ms:channel type="level" orderby="sort" order="desc"}
+                            {ms:channel type="level" orderby="sort" orderby="date"}
                             <li <#if field.typeindex == 1>class="active"</#if>><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a></li>
                             {/ms:channel}
                         </ul>
@@ -42,11 +42,11 @@
                         <!-- 分会列表区域 -->
                         <div class="branch_section">
                             <!-- 第一块区域 -->
-                            {ms:channel type="son" orderby="sort" order="desc"}
+                            {ms:channel type="son" orderby="sort" orderby="date"}
                             <div class="branch_section_box">
                                 <h6>${field.typetitle}</h6>
                                 <ul>
-                                    {ms:channel type="son" orderby="sort" order="desc"}
+                                    {ms:channel type="son" orderby="sort" orderby="date"}
                                         <li><a href="{ms:global.url/}${field.typelink}">马克思主义研究分会</a></li>
                                     {/ms:channel}
                                 </ul>

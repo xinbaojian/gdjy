@@ -40,7 +40,7 @@
                             <!-- <div class="international_slide"> -->
                                 <!-- 左区域 -->
                                 <!-- <div class="international_left">
-                                    {ms:arclist size=1 order="desc" typeid=31}
+                                    {ms:arclist size=1 orderby="date" typeid=31}
                                     <a href="{ms:global.url/}${field.link}">
                                         <img src="${field.litpic}">
                                         <div class="cover_title">${field.title}</div>
@@ -51,7 +51,7 @@
                                 <!-- 右区域 -->
                                 <!-- <div class="international_right">
                                     <ul>
-                                        {ms:arclist size=4 order="desc" typeid=31}
+                                        {ms:arclist size=4 orderby="date" typeid=31}
                                         <#if field.index != 1>
                                         <li>
                                             <a href="{ms:global.url/}${field.link}">
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="section_two_body">
                                     <ul class="first_list two">
-                                        {ms:arclist size=3 orderby="sort" order="desc" typeid=30}
+                                        {ms:arclist size=3 orderby="sort" orderby="date" typeid=30}
                                         <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
                                         {/ms:arclist}
                                     </ul>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="section_two_body">
                                     <ul class="first_list two">
-                                        {ms:arclist size=3 orderby="sort" order="desc" typeid=29}
+                                        {ms:arclist size=3 orderby="sort" orderby="date" typeid=29}
                                         <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a></li>
                                         {/ms:arclist}
                                     </ul>

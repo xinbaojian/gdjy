@@ -30,7 +30,7 @@
                     <div class="page_cont_box clear">
                         <!-- 列表区域 -->
                         <ul class="first_list two">
-                            {ms:arclist size=1000 order="desc"}
+                            {ms:arclist size=1000 orderby="date"}
                                 <li><a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a><span class="time">${field.date?string("yyyy-MM-dd")}</span></li>
                             {/ms:arclist}
                         </ul>

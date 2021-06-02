@@ -29,94 +29,6 @@
         <!-- 内容区域 -->
         <div class="content w1200">
             <div class="part1">
-                <!-- <div class="learnNews news-b">
-                    <dl class="news-box">
-                        <dt>
-                            {ms:channel type="self" typeid=37}
-                            <div class="news-title fl">${field.typetitle}</div>
-                            <div class="news-more fr">
-                                <a href="{ms:global.url/}${field.typelink}">更多+</a>
-                            </div>
-                            {/ms:channel}
-                        </dt>
-                        <dd class="clear">
-                            <ul>
-                                {ms:arclist size=10 orderby="sort" order="desc" typeid=37}
-                                <li>
-                                    <a href="{ms:global.url/}${field.link}" target="_blank"><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a>
-                                    <span class="mydate">${field.date?string("yyyy-MM-dd")}</span>
-                                </li>
-                                {/ms:arclist}
-                            </ul>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="learnNews news-b">
-                    <dl class="news-box">
-                        <dt>
-                            {ms:channel type="self" typeid=24}
-                            <div class="news-title fl">${field.typetitle}</div>
-                            <div class="news-more fr">
-                                <a href="{ms:global.url/}${field.typelink}">更多+</a>
-                            </div>
-                            {/ms:channel}
-                        </dt>
-                        <dd class="clear">
-                            <ul>
-                                {ms:arclist size=10 orderby="sort" order="desc" typeid=24}
-                                <li>
-                                    <a href="{ms:global.url/}${field.link}" target="_blank"><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a>
-                                    <span class="mydate">${field.date?string("yyyy-MM-dd")}</span>
-                                </li>
-                                {/ms:arclist}
-                            </ul>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="learnNews news-b">
-                    <dl class="news-box">
-                        <dt>
-                            {ms:channel type="self" typeid=17}
-                            <div class="news-title fl">${field.typetitle}</div>
-                            <div class="news-more fr">
-                                <a href="{ms:global.url/}${field.typelink}">更多+</a>
-                            </div>
-                            {/ms:channel}
-                        </dt>
-                        <dd class="clear">
-                            <ul>
-                                {ms:arclist size=10 orderby="sort" order="desc" typeid=17}
-                                <li>
-                                    <a href="{ms:global.url/}${field.link}" target="_blank"><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a>
-                                    <span class="mydate">${field.date?string("yyyy-MM-dd")}</span>
-                                </li>
-                                {/ms:arclist}
-                            </ul>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="learnNews news-b">
-                    <dl class="news-box">
-                        <dt>
-                            {ms:channel type="self" typeid=14}
-                            <div class="news-title fl">${field.typetitle}</div>
-                            <div class="news-more fr">
-                                <a href="{ms:global.url/}${field.typelink}">更多+</a>
-                            </div>
-                            {/ms:channel}
-                        </dt>
-                        <dd class="clear">
-                            <ul>
-                                {ms:arclist size=10 orderby="sort" order="desc" typeid=14}
-                                <li>
-                                    <a href="{ms:global.url/}${field.link}" target="_blank"><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if></a>
-                                    <span class="mydate">${field.date?string("yyyy-MM-dd")}</span>
-                                </li>
-                                {/ms:arclist}
-                            </ul>
-                        </dd>
-                    </dl>
-                </div> -->
                 <!-- 第一块区域 -->
             <div class="news_section">
                 <!-- 左区域 -->
@@ -143,7 +55,7 @@
                         <div class="bd">
                             <!-- 学会资讯-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=10 order="desc" typeid=35}
+                                {ms:arclist size=10  typeid=35 orderby="date"}
                                     <li>
                                         <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p> -->
@@ -154,7 +66,7 @@
                             <!-- 学会资讯-结束 -->
                             <!-- 分会纵横区域 -->
                             <ul class="index_list">
-                                {ms:arclist size=10 order="desc" typeid=24}
+                                {ms:arclist size=10 orderby="date" typeid=24}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -191,7 +103,7 @@
                         <div class="bd">
                             <!-- 会议通知-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=10 order="desc" typeid=36}
+                                {ms:arclist size=10 orderby="date" typeid=36}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -202,7 +114,7 @@
                             <!-- 会议通知-结束 -->
                             <!-- 业务公告-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=10 order="desc" typeid=37}
+                                {ms:arclist size=10 orderby="date" typeid=37}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -240,7 +152,7 @@
                         <div class="bd">
                             <!-- 智库观点-开始 -->
                                 <ul class="index_list">
-                                    {ms:arclist size=10 order="desc" typeid=17}
+                                    {ms:arclist size=10 orderby="date" typeid=17}
                                     <li>
                                         <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                             <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -251,7 +163,7 @@
                             <!-- 智库观点-结束 -->
                             <!-- 会刊精选-开始 -->
                                 <ul class="index_list">
-                                    {ms:arclist size=10 order="desc" typeid=16}
+                                    {ms:arclist size=10 orderby="date" typeid=16}
                                     <li>
                                         <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                             <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -288,7 +200,7 @@
                         <div class="bd">
                             <!-- 会议通知-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=10 order="desc" typeid=15}
+                                {ms:arclist size=10 orderby="date" typeid=15}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->
@@ -299,7 +211,7 @@
                             <!-- 会议通知-结束 -->
                             <!-- 业务公告-开始 -->
                             <ul class="index_list">
-                                {ms:arclist size=10 order="desc" typeid=14}
+                                {ms:arclist size=10 orderby="date" typeid=14}
                                 <li>
                                     <a href="{ms:global.url/}${field.link}"><span>•</span><#if field.flag == "r"><font color="#ff0000">${field.title}</font><#else>${field.title}</#if>
                                         <!-- <p class="profile" >${field.descrip}</p>   -->

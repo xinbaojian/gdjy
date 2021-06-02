@@ -132,11 +132,12 @@
             <!-- 学会领导区域结束 -->
             <!--历届领导-->
             <div class="nav_strategy">
-                <div class="wrap_title">
-                    <a target="_blank">
-                        历届领导
-                    </a>
-                </div>
+                {ms:channel type="self" typeid=82}
+                    <div class="wrap_title">
+                        <a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                        <!-- <a  href="${global.url}/xuehuimishuchu/index.html">发展战略</a> -->
+                    </div>
+                {/ms:channel}
             </div>
             <!-- 发展战略区域 -->
             <div class="nav_strategy" >
@@ -146,31 +147,12 @@
                         <!-- <a  href="${global.url}/xuehuimishuchu/index.html">发展战略</a> -->
                     </div>
                 {/ms:channel}
-                <!-- {ms:channel type="self" typeid=5}
-                <div class="wrap_title">
-                    <a target="_blank">
-                        ${field.typetitle}
-                    </a>
-                </div>
-                <div class="nav_regulation_section">
-                    <ul class="nav_regulation_list">
-                        {ms:arclist size=1 orderby="date"}
-                            <li>
-                                <a href="{ms:global.url/}${field.link}" title="${field.title}" style="font-size: 16px;">
-                                    <span>•</span>
-                                    ${field.title}
-                                </a>
-                            </li>
-                        {/ms:arclist}
-                    </ul>
-                </div>
-                 {/ms:channel} -->
 
             </div>
             
             <div class="nav_strategy">
                 <div class="wrap_title">
-                    <a target="_blank">
+                    <a href="${global.url}/huiyuandanwei/index.html">
                         会员单位
                     </a>
                 </div>
@@ -252,7 +234,7 @@
                 <!-- 二级导航区域 -->
                 <div class="menu_nav">
                     <ul>
-                        {ms:channel typeid=13 orderby="sort" order="desc"}
+                        {ms:channel typeid=13 orderby="sort" orderby="date"}
                         <li><a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a></li>
                         {/ms:channel}
                     </ul>
@@ -265,10 +247,10 @@
                 <!-- 二级导航区域 -->
                 <div class="menu_nav">
                     <ul>
-                        {ms:channel type="son" orderby="sort" order="desc"}
+                        {ms:channel type="son" orderby="sort" orderby="date"}
                         <li>
                             <#if field.typeid==19>
-                                <a title="${field.typetitle}" {ms:channel type="son" order="desc" } <#if field.typeindex==1>
+                                <a title="${field.typetitle}" {ms:channel type="son" orderby="date" } <#if field.typeindex==1>
                                     href="{ms:global.url/}${field.typelink}" >
                             </#if>
                             {/ms:channel}
@@ -296,7 +278,7 @@
                 <!-- 二级导航区域 -->
                 <div class="menu_nav">
                     <ul>
-                        {ms:channel type="son" orderby="sort" order="desc"}
+                        {ms:channel type="son" orderby="sort" orderby="date"}
                         <#if field.typeid==23>
                             <li><a href="${field.typelitpic}" target="_blank" title="${field.typetitle}">${field.typetitle}</a></li>
                             <#else>
@@ -315,7 +297,7 @@
                 <!-- 二级导航区域 -->
                 <div class="menu_nav">
                     <ul>
-                        {ms:channel type="son" orderby="sort" order="desc"}
+                        {ms:channel type="son" orderby="sort" orderby="date"}
                         <li>
                             <#if field.typeid==27>
                                 <a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a>
@@ -336,7 +318,7 @@
                 <!-- 二级导航区域 -->
                 <div class="menu_nav">
                     <ul>
-                        {ms:channel type="son" orderby="sort" order="desc"}
+                        {ms:channel type="son" orderby="sort" orderby="date"}
                         <li>
                             <a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a>
                         </li>
@@ -352,7 +334,7 @@
                 <!-- 二级导航区域 -->
                 <div class="menu_nav">
                     <ul>
-                        {ms:channel type="son" orderby="sort" order="desc"}
+                        {ms:channel type="son" orderby="sort" orderby="date"}
                         <li>
                             <a href="{ms:global.url/}${field.typelink}" title="${field.typetitle}">${field.typetitle}</a>
                         </li>

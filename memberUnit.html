@@ -1,0 +1,88 @@
+<!--会员单位-->
+<!---科研参考-->
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>${field.typetitle}_{ms:global.name/}</title>
+    <#include "head-file.htm" />
+    <style>
+        .schoolImg{
+            height: 90px;
+            width: 300px;
+        }
+        .memberUnitul{
+            height: auto;
+            min-height: 300px; 
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .memberUnitli{
+            width:200px;
+            height:40px;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+        }
+
+        .memberUnitli a{
+            align-self: center;
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }   
+    </style>
+</head>
+<body>
+    <body>
+        <!-- 整体区域 -->
+        <div class="wrap">
+            <!-- 中间区域 -->
+            <div class=" clear">
+                <#include "head.htm"/>
+                <!-- 内容区域 -->
+                <div class="content w1200" >
+                    <div class="page_content" style="padding-bottom: 0;">
+                        <div class="breadnav">
+                            您当前的位置：
+                            <a href="{ms:global.host/}">首页</a>
+                            {ms:channel type="path" }
+                            <span>&gt;</span><a href="{ms:global.url/}${field.typelink}">${field.typetitle}</a>
+                            {/ms:channel}
+                        </div>
+                    </div>
+                    <div class="page_cont_box clear">
+                        <div class="TextTitle clear">
+                            <h5>会员单位</h5>
+                        </div>
+                         <ul class="memberUnitul" id="memberUnitul">
+                             <!-- <li class="memberUnitli">
+                                    <img src="{ms:global.host/}/{ms:global.style/}/images/武汉大学.png" class="schoolImg">
+                                    <a target="_blank" href="https://www.whu.edu.cn/"></a>
+                             </li> -->
+                         </ul>
+                    </div>
+                 
+                </div>
+               
+            </div>
+            <!-- 中间区域结束 -->
+    
+            <!-- 底部区域 -->
+            <#include "footer.htm"/>
+            <!-- 底部区域结束 -->
+        </div>
+        <!-- 整体区域结束 -->
+        <#include "browser.htm"/>
+    </body>
+    
+    </html>
+    <#include "common.htm"/>
+
+
+    
